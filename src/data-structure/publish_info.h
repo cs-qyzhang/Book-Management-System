@@ -18,4 +18,4 @@ typedef struct publish_info
 
 }PublishInfo;
 
-#endif //PUBLISH_INFO_H
+#endif // PUBLISH_INFO_H

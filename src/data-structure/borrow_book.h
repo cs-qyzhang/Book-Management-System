@@ -20,6 +20,7 @@ typedef struct borrow_book
     struct tm *return_time;         // 应归还/归还 时间
     CNMARC *cnmarc;                 // 借阅书的CNMARC信息
     BookLocation *book_location;    // 书籍位置
+    struct borrow_book *next;       // 指向下一个的指针
 
 }BorrowBook;
 

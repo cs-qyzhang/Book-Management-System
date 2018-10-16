@@ -29,4 +29,4 @@ typedef struct cn_marc
 
 }CNMARC;
 
-#endif //CNMARC_H
+#endif // CNMARC_H

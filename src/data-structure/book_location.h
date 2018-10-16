@@ -4,7 +4,7 @@
  * filename    : book_location.h
  * author      : qiuyang Zhang
  * created     : 2018/10/16
- * description : 
+ * description : 书籍馆藏位置结构
  *
  */
 #ifndef BOOK_LOCATION_H

@@ -27,7 +27,8 @@ typedef struct book_info
     int amount;             // 图书数量
     BookState book_state;   // 馆藏状态
     struct tm *return_time; // 到期时间
+    struct book_info *next; // 指向链表下一个
     
 }BookInfo;
 
-#endif //BOOK_INFO_H
+#endif // BOOK_INFO_H

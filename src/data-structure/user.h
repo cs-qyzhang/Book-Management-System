@@ -19,8 +19,8 @@ typedef struct user
     char *password;             // 用户密码
     bool root;                  // 是否是管理员
     char *job_id;               // 工号
-    BorrowBook *borrow_book;    // 已借阅的图书
-    BorrowBook *borrow_history; // 借阅历史
+    BorrowBook *borrow_book;    // 已借阅的图书 单链表头指针
+    BorrowBook *borrow_history; // 借阅历史 单链表头指针
 
 }User;
 
