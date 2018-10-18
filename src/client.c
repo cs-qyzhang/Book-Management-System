@@ -7,5 +7,15 @@
  * description : 客户端main
  *
  */
+#include <stdio.h>
+#include "connect-database/connect_database.h"
+#include <string.h>
 
+int main(int argc, char **argv)
+{
+    char send_msg[50] = "hello, socket!";
+    char recv_msg[50];
+
+    connect_to_server(send_msg, strlen(send_msg) * sizeof(char), recv_msg, 49);
+}
 
