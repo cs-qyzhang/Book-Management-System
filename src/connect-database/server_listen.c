@@ -7,58 +7,99 @@
  * description : 服务器监听
  *
  */
+/*#include <arpa/inet.h>*/
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <sys/types.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <netdb.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "connect_database.h"
+#include "./connect_database.h"
+#include "../login/login.h"
+#include "../global_data.h"
 
 #define RECV_MSG_LEN    500
 
 bool listen_to_client()
 {
-    int sfd, connected_sfd;
-    struct sockaddr_in addr, connected_addr;
-    socklen_t sock_len;
-    int recv_byte, send_byte;
-    size_t recv_len, send_len;
-    char recv_msg[RECV_MSG_LEN];
-    char *send_msg;
+    struct addrinfo hints, *res;
+    char addr_buf[51];
+    
+    memset(&hints, 0, sizeof(struct addrinfo));
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_PASSIVE;
 
-    recv_len = RECV_MSG_LEN;
-    sock_len = sizeof(struct sockaddr_in);
-
-    sfd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sfd == -1)
+    if (getaddrinfo(NULL, PORT_SERVER, &hints, &res))
     {
-        fprintf(stderr, "listen_to_client : socket error!\n");
-        return false;
+        perror("getaddrinfo");
+        exit(EXIT_FAILURE);
     }
 
-    memset(&addr, 0, sizeof(struct sockaddr_in));
-    inet_pton(AF_INET, IP_SERVER, &addr.sin_addr);
-    addr.sin_port = PORT_SERVER;
-    bind(sfd, (struct sockaddr *)&addr, sizeof(struct sockaddr_in));
-    listen(sfd, 5);
+    inet_ntop(AF_INET, &(((struct sockaddr_in *)res->ai_addr)->sin_addr), addr_buf, 50);
+    printf("server ip: %s\n", addr_buf);
 
+    int sfd;
+    sfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
+    if (sfd == -1)
+    {
+        perror("socket");
+        exit(EXIT_FAILURE);
+    }
+
+    if (bind(sfd, res->ai_addr, res->ai_addrlen) == -1)
+    {
+        perror("bind");
+        close(sfd);
+        exit(EXIT_FAILURE);
+    }
+    freeaddrinfo(res);
+
+    if (listen(sfd, 3) == -1)
+    {
+        perror("listen");
+        close(sfd);
+        exit(EXIT_FAILURE);
+    }
+
+    struct sockaddr_storage client_addr;
+    socklen_t client_addr_len;
+    client_addr_len = sizeof(struct sockaddr_storage);
+
+    char recv_msg[51];
+    size_t recv_len;
+    recv_len = 50;
     while (true)
     {
+        int connected_sfd;
         printf("begin accept...\n");
-        connected_sfd = accept(sfd, (struct sockaddr *)&connected_addr, &sock_len);
-        printf("connect!\n");
-        recv_byte = recv(sfd, recv_msg, recv_len, 0);
+        connected_sfd = accept(sfd, (struct sockaddr *)&client_addr, &client_addr_len);
+        if (connected_sfd == -1)
+        {
+            perror("accept");
+            close(sfd);
+            exit(EXIT_FAILURE);
+        }
 
-        send_len = strlen("great!") * sizeof(char);
-        send_msg = (char *)malloc(send_len + 1);
-        strcpy(send_msg, "great!");
-        if (strcmp(recv_msg, "hello, socket!"))
-            send_byte = send(sfd, send_msg, send_len, 0);
-        close(connected_sfd);
-        printf("closed!\n");
+        connected = true;
+        inet_ntop(AF_INET, &(((struct sockaddr_in *)&client_addr)->sin_addr), addr_buf, 50);
+        printf("connected to client: %s!\n", addr_buf);
+
+        while (true)
+        {
+            if (recv(connected_sfd, recv_msg, recv_len, 0) >= 0)
+            {
+                if (!strcmp(recv_msg, "login_request"))
+                    login_authentication();
+            }
+            else
+                break;
+        }
+        connected = false;
     }
 
     return 0;

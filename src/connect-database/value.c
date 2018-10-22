@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "connect_database.h"
+#include "./connect_database.h"
 
 /*
  * 函数名称：value_type
@@ -33,10 +33,20 @@ value_type(const char *value_name)
         result = (char *)malloc(strlen("string") * sizeof(char) + 1);
         strcpy(result, "string");
     }
+    else if (!strcmp(value_name, "job_id"))
+    {
+        result = (char *)malloc(strlen("string") * sizeof(char) + 1);
+        strcpy(result, "string");
+    }
     else if (!strcmp(value_name, "password"))
     {
         result = (char *)malloc(strlen("string") * sizeof(char) + 1);
         strcpy(result, "string");
+    }
+    else if (!strcmp(value_name, "root"))
+    {
+        result = (char *)malloc(strlen("bool") * sizeof(char) + 1);
+        strcpy(result, "bool");
     }
     else
         ;
@@ -67,6 +77,8 @@ value_to_string(const char *value_name, const void *value)
         sprintf(temp, "%lf", *(double *)value);
     else if (!strcmp(type, "string"))
         sprintf(temp, "%s", (char *)value);
+    else if (!strcmp(type, "bool"))
+        sprintf(temp, "%s", (*(bool *)value) == true ? "true" : "false");
     else
         ;
 
@@ -108,6 +120,11 @@ string_to_value(char *value_name, char *value_string)
         result = (char *)malloc(strlen(value_string) * sizeof(char) + 1);
         strcpy((char *)result, value_string);
     }
+    else if (!strcmp(type, "bool"))
+    {
+        result = (bool *)malloc(sizeof(bool));
+        *(bool *)result = strcmp(value_string, "true") ? true : false;
+    }
     else
         ;
 
@@ -133,7 +150,7 @@ value_write(const char *value_name, const void *value)
     char temp[VALUE_LEN + VALUE_NAME_LEN + 3];
 
     value_string = value_to_string(value_name, value);
-    sprintf(temp, "%s: %s", value_name, value_string);
+    sprintf(temp, "%s: %s\n", value_name, value_string);
     result = (char *)malloc(strlen(temp) * sizeof(char) + 1);
     strcpy(result, temp);
     free(value_string);

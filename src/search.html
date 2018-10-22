@@ -1,0 +1,2661 @@
+HTTP/1.1 200 OK
+Date: Sat, 20 Oct 2018 04:14:50 GMT
+Server: III 100
+Pragma: no-cache
+Cache-control: no-store
+Content-Type: text/html; charset=UTF-8
+Expires: Sat, 20 Oct 2018 04:14:50 GMT
+Set-Cookie: SESSION_LANGUAGE=chx; path=/; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: III_EXPT_FILE=aa22527; path=/; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: III_SESSION_ID=8ede753c6b62b1c7cd67b81f138b4e6a; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: SESSION_SCOPE=0; path=/
+Vary: Accept-Encoding,User-Agent
+Connection: close
+
+<html   dir="LTR">
+<head>
+<title>华中科技大学</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/features.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!--[if lte IE 8]><link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" /><![endif]-->
+</head>
+<body bgcolor="#FFFFFF" >
+<!-- begin toplogo.html file -->
+<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
+<!-- This file last changed: 20 April, 2006 -->
+<div id="topLogohead">
+<div id="topID">
+	<div align="right">
+		<ul>
+			<li><a href="/patroninfo*chx">个人信息登录</a></li>
+			<li class="breaker">|</li>
+			<li><a href="http://202.114.9.3/ArticleChannel.aspx?ChannelID=99">推荐购买</a></li>
+			<li class="breaker">|</li>
+		   
+			<li><a href="/screens/help_index_chx.html">帮助</a></li>
+			<li class="breaker">|</li>
+			<li><a href="http://202.114.9.3">图书馆主页</a></li>
+			<li class="breaker">|</li>
+			<li><a href="/*eng">English Version</a></li>
+		</ul>
+	</div>
+</div>
+<div style="float:left;">
+	<div id="topLogoImage"><a href="/"><img src="/screens/logo_chx.gif" width="500" height="40" border="0" alt="Innopac of Library, HUST." /></a></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<!--end toplogo.html-->
+
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(6000000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id=TimeoutSeconds>0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+<meta http-equiv="Refresh" content="6000;URL=/" />
+</noscript>
+<div align="center" class="navigationRow">
+<form>
+<a href="/search~S0*chx"><img src="/screens/startover_chx.gif" alt="重新检索" border="0" /></a>
+<a href="/search*chx/X?NOSRCH=Java&SORT=D&SUBKEY=Java"><img src="/screens/modify_chx.gif" alt="修改检索" border="0" /></a>
+<a href="/search*chx/X"><img src="/screens/another_chx.gif" alt="再次检索" border="0" /></a>
+<select name=HISTORY onChange="onSelectChange(this, '*chx')"><option value="">(检索历史)</option>
+<OPTION VALUE="XJava&SORT=D">关键词: Java
+<option value="+/search*chx/X?Java&SORT=D&clear_history">(清除检索历史)</option>
+<option value="+/*chx">(结束检索进程)</option>
+</select>
+<noscript>
+<h2>搜索历史功能需要JavaScript。</h2>
+</noscript>
+</form>
+</div>
+
+<!-- BEGIN BROWSE SCREEN TABLE -->
+<table width="100%" cellpadding="2" cellspacing="0" border="0" class="browseScreen">
+<!-- BEGIN SEARCH WIDGET -->
+<div align="center">
+<tr align="center" valign="middle">
+<td valign="middle" colspan="2">
+<div  class="browseSearchtool">
+<script type="text/JavaScript">
+<!-- Hide the JS
+var savedScope;
+var savedTag;
+var savedSearch;
+var sortButtonText = null;
+var savedExactSearch = null;
+var sortButtonEvent = null;
+var sortExactBrowseURL = null;
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "题名";
+sortTypes[1] = "a";
+sortLabels[1] = "作者";
+sortTypes[2] = "r";
+sortLabels[2] = "出版时间";
+sortTypes[3] = "n";
+sortLabels[3] = "索书号";
+sortLabels[4] = "系统排序";
+sortTypes[4] = "-";
+var sortSelectedValue = "4";
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script>
+<form name="searchtool" target="_self" action="/search*chx/" method='GET'>
+      <label for="searchtype" style="display:none;">SearchType</label> <select name="searchtype" id="searchtype" onChange="initSort()">
+        <option value="X" selected="selected"> 关键词</option>
+        <option value="a"> 作者</option>
+        <option value="t"> 题名</option>
+        <option value="d"> 主题</option>
+        <option value="c"> 索书号</option>
+      </select>
+      &nbsp;
+      <label for="searcharg" style="display:none;">Search</label><input type="text" name="searcharg" id="searcharg" size="30" onchange='return searchtoolSubmitAction()'maxlength="75" value="Java" />
+      &nbsp;
+
+<span id="sort_cell">
+</span>
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script>
+      <input type="hidden" name="SORT" value="DZ" /><input type="hidden" name="extended" value="0" />      <input type="submit" name="SUBMIT" value="检索" onclick='return searchtoolSubmitAction();' />
+<div>
+      <input type="checkbox" name="availlim" value="1"  /> <span class="availLimMessage">限定在可出借馆藏中查询</span><br/>
+</div>
+<div>
+      <input type="hidden" name="searchlimits" value="" />
+      <input type="hidden" name="searchorigarg" value="XJava&SORT=D" />
+</div>
+</form>
+<div  class="browseSearchtoolMessage">       <i>找到 4306 条记录 </i>排序依据  <strong>相关度</strong>  | <a href="/search*chx/X?Java&SORT=DX">日期</a>  | <a href="/search*chx/X?Java&SORT=AX">题名</a> .
+</div>
+<div></div></div>
+
+</td>
+</tr>
+</div>
+<!-- END SEARCH WIDGET -->
+
+<!-- BEGIN BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+结果页&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/51%2C4306%2C4306%2CB/browse">2</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/101%2C4306%2C4306%2CB/browse">3</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/151%2C4306%2C4306%2CB/browse">4</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/201%2C4306%2C4306%2CB/browse">5</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/251%2C4306%2C4306%2CB/browse">6</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/301%2C4306%2C4306%2CB/browse">7</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/351%2C4306%2C4306%2CB/browse">8</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/401%2C4306%2C4306%2CB/browse">9</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/451%2C4306%2C4306%2CB/browse">10</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/501%2C4306%2C4306%2CB/browse">11</a>
+...
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/4301%2C4306%2C4306%2CB/browse">87</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/51%2C4306%2C4306%2CB/browse">后一页</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BROWSE PAGER -->
+
+<style type="text/css">
+<!--
+#rategroup1 { display: inline }
+#rateneed1  { display: none }
+#rategroupMy1 { display: none }
+#ratemy1      { display: inline }
+#rategroup2 { display: inline }
+#rateneed2  { display: none }
+#rategroupMy2 { display: none }
+#ratemy2      { display: inline }
+#rategroup3 { display: inline }
+#rateneed3  { display: none }
+#rategroupMy3 { display: none }
+#ratemy3      { display: inline }
+#rategroup4 { display: inline }
+#rateneed4  { display: none }
+#rategroupMy4 { display: none }
+#ratemy4      { display: inline }
+#rategroup5 { display: inline }
+#rateneed5  { display: none }
+#rategroupMy5 { display: none }
+#ratemy5      { display: inline }
+#rategroup6 { display: inline }
+#rateneed6  { display: none }
+#rategroupMy6 { display: none }
+#ratemy6      { display: inline }
+#rategroup7 { display: inline }
+#rateneed7  { display: none }
+#rategroupMy7 { display: none }
+#ratemy7      { display: inline }
+#rategroup8 { display: inline }
+#rateneed8  { display: none }
+#rategroupMy8 { display: none }
+#ratemy8      { display: inline }
+#rategroup9 { display: inline }
+#rateneed9  { display: none }
+#rategroupMy9 { display: none }
+#ratemy9      { display: inline }
+#rategroup10 { display: inline }
+#rateneed10  { display: none }
+#rategroupMy10 { display: none }
+#ratemy10      { display: inline }
+#rategroup11 { display: inline }
+#rateneed11  { display: none }
+#rategroupMy11 { display: none }
+#ratemy11      { display: inline }
+#rategroup12 { display: inline }
+#rateneed12  { display: none }
+#rategroupMy12 { display: none }
+#ratemy12      { display: inline }
+#rategroup13 { display: inline }
+#rateneed13  { display: none }
+#rategroupMy13 { display: none }
+#ratemy13      { display: inline }
+#rategroup14 { display: inline }
+#rateneed14  { display: none }
+#rategroupMy14 { display: none }
+#ratemy14      { display: inline }
+#rategroup15 { display: inline }
+#rateneed15  { display: none }
+#rategroupMy15 { display: none }
+#ratemy15      { display: inline }
+#rategroup16 { display: inline }
+#rateneed16  { display: none }
+#rategroupMy16 { display: none }
+#ratemy16      { display: inline }
+#rategroup17 { display: inline }
+#rateneed17  { display: none }
+#rategroupMy17 { display: none }
+#ratemy17      { display: inline }
+#rategroup18 { display: inline }
+#rateneed18  { display: none }
+#rategroupMy18 { display: none }
+#ratemy18      { display: inline }
+#rategroup19 { display: inline }
+#rateneed19  { display: none }
+#rategroupMy19 { display: none }
+#ratemy19      { display: inline }
+#rategroup20 { display: inline }
+#rateneed20  { display: none }
+#rategroupMy20 { display: none }
+#ratemy20      { display: inline }
+#rategroup21 { display: inline }
+#rateneed21  { display: none }
+#rategroupMy21 { display: none }
+#ratemy21      { display: inline }
+#rategroup22 { display: inline }
+#rateneed22  { display: none }
+#rategroupMy22 { display: none }
+#ratemy22      { display: inline }
+#rategroup23 { display: inline }
+#rateneed23  { display: none }
+#rategroupMy23 { display: none }
+#ratemy23      { display: inline }
+#rategroup24 { display: inline }
+#rateneed24  { display: none }
+#rategroupMy24 { display: none }
+#ratemy24      { display: inline }
+#rategroup25 { display: inline }
+#rateneed25  { display: none }
+#rategroupMy25 { display: none }
+#ratemy25      { display: inline }
+#rategroup26 { display: inline }
+#rateneed26  { display: none }
+#rategroupMy26 { display: none }
+#ratemy26      { display: inline }
+#rategroup27 { display: inline }
+#rateneed27  { display: none }
+#rategroupMy27 { display: none }
+#ratemy27      { display: inline }
+#rategroup28 { display: inline }
+#rateneed28  { display: none }
+#rategroupMy28 { display: none }
+#ratemy28      { display: inline }
+#rategroup29 { display: inline }
+#rateneed29  { display: none }
+#rategroupMy29 { display: none }
+#ratemy29      { display: inline }
+#rategroup30 { display: inline }
+#rateneed30  { display: none }
+#rategroupMy30 { display: none }
+#ratemy30      { display: inline }
+#rategroup31 { display: inline }
+#rateneed31  { display: none }
+#rategroupMy31 { display: none }
+#ratemy31      { display: inline }
+#rategroup32 { display: inline }
+#rateneed32  { display: none }
+#rategroupMy32 { display: none }
+#ratemy32      { display: inline }
+#rategroup33 { display: inline }
+#rateneed33  { display: none }
+#rategroupMy33 { display: none }
+#ratemy33      { display: inline }
+#rategroup34 { display: inline }
+#rateneed34  { display: none }
+#rategroupMy34 { display: none }
+#ratemy34      { display: inline }
+#rategroup35 { display: inline }
+#rateneed35  { display: none }
+#rategroupMy35 { display: none }
+#ratemy35      { display: inline }
+#rategroup36 { display: inline }
+#rateneed36  { display: none }
+#rategroupMy36 { display: none }
+#ratemy36      { display: inline }
+#rategroup37 { display: inline }
+#rateneed37  { display: none }
+#rategroupMy37 { display: none }
+#ratemy37      { display: inline }
+#rategroup38 { display: inline }
+#rateneed38  { display: none }
+#rategroupMy38 { display: none }
+#ratemy38      { display: inline }
+#rategroup39 { display: inline }
+#rateneed39  { display: none }
+#rategroupMy39 { display: none }
+#ratemy39      { display: inline }
+#rategroup40 { display: inline }
+#rateneed40  { display: none }
+#rategroupMy40 { display: none }
+#ratemy40      { display: inline }
+#rategroup41 { display: inline }
+#rateneed41  { display: none }
+#rategroupMy41 { display: none }
+#ratemy41      { display: inline }
+#rategroup42 { display: inline }
+#rateneed42  { display: none }
+#rategroupMy42 { display: none }
+#ratemy42      { display: inline }
+#rategroup43 { display: inline }
+#rateneed43  { display: none }
+#rategroupMy43 { display: none }
+#ratemy43      { display: inline }
+#rategroup44 { display: inline }
+#rateneed44  { display: none }
+#rategroupMy44 { display: none }
+#ratemy44      { display: inline }
+#rategroup45 { display: inline }
+#rateneed45  { display: none }
+#rategroupMy45 { display: none }
+#ratemy45      { display: inline }
+#rategroup46 { display: inline }
+#rateneed46  { display: none }
+#rategroupMy46 { display: none }
+#ratemy46      { display: inline }
+#rategroup47 { display: inline }
+#rateneed47  { display: none }
+#rategroupMy47 { display: none }
+#ratemy47      { display: inline }
+#rategroup48 { display: inline }
+#rateneed48  { display: none }
+#rategroupMy48 { display: none }
+#ratemy48      { display: inline }
+#rategroup49 { display: inline }
+#rateneed49  { display: none }
+#rategroupMy49 { display: none }
+#ratemy49      { display: inline }
+#rategroup50 { display: inline }
+#rateneed50  { display: none }
+#rategroupMy50 { display: none }
+#ratemy50      { display: inline }
+-->
+</style>
+<!-- BEGIN BROWSE SCREEN LEFT CELL: BROWSELIST/BRIEFCIT AREA -->
+<tr><td>
+<table border="0" cellpadding="3" width="100%">
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5"  class="browseSaveJump" width="100%">
+<form method="POST" action="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse" name="export_form" id="export_form" >
+<input type="hidden" name="jumpref" value="XJava">
+<input type="hidden" id="save_func" name="save_func" value=""/>
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked_chx.gif" alt="Save marked records" class="button" width="120" height="20" border="0" /></a>
+<span name='save_page_btn1' id='save_page_btn1' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage_chx.gif" alt="Save all on page" class="button" width="120" height="20" border="0" /></a>
+</span>
+<span name='mylist_btn1' id='mylist_btn1' style='visibility: visible' ><a href="#" onclick="save_to_mylist();">
+保存至我的收藏夹</a>
+</span>
+</td></tr>
+
+
+</td>
+</tr>
+<tr  class="browseHeader">
+<td align="center" class="browseHeaderData">
+关键词 (1-50 共 4306)
+</td>
+</tr>
+<!-- Right Result rank 1 -->
+<tr  class="browseSuperEntry browseEntryRelGroup1"><td colspan="1"><img src="/screens/relevance5.gif" alt="">&nbsp;最相关题名&nbsp;1-2349 条记录</td></tr>
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_1'></a> 1<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4022405" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4022405&FF=XJava&SORT=D&1%2C1%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup1"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_1"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302487180&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302487180&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&1%2C1%2C">Java程序设计案例教程 / 秦军编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+秦军
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书是关于Java程序设计的案例教程。全书共分为11 章, 包括Java语言基础、Java语言的基本语法、面向对象程序设计、Java的类型封装器与注解、Java异常处理机制、常用Java API、Java I/O 流、Java多线程编程、Java 传统GUI编程、JavaFX GUI编程以及JavaFX绘图与动画等技术。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_2'></a> 2<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4022406" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4022406&FF=XJava&SORT=D&2%2C2%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup2"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_2"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302483809&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302483809&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&2%2C2%2C">Java核心技术 / 白文荣主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+白文荣
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书包含程序设计历程、Java编程基础、Java多媒体应用、J2EE编程技术、JSP网络编程基础、MVC架构等方面的内容, 以学生整体、系统的掌握Java核心技术为目标，难度由浅入深、循序渐进的规律编排教学内容，力求本书内容系统、详细明了、通俗易懂。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_3'></a> 3<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4022408" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4022408&FF=XJava&SORT=D&3%2C3%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup3"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_3"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302483663&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302483663&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&3%2C3%2C">Java开发实战经典 / 李兴华编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+李兴华
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书是一本综合讲解Java核心技术的书籍, 在书中使用大量的代码及案例进行知识点的分析与运用, 并且给出一些比较成熟的开发步骤, 帮助读者更好地进行Java的开发。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_4'></a> 4<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4026378" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4026378&FF=XJava&SORT=D&4%2C4%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup4"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_4"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121328664&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121328664&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&4%2C4%2C">Absolute Java中文版 / (美) Walter Savitch, Kenrick Mock著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+萨维奇 (Savitch, Walter)
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书侧重于面向对象设计, 通过浅显易懂的语言和代码, 很好地平衡了完整实例和解释性讨论, 并围绕着Java语言的特性全面透彻地介绍诸多编程技术。书中全面介绍了Java语言已经实现的封装、继承和多态性技术, 并在介绍Swing GUI的时候提及事件驱动的编程并提供了很多练习。在介绍UML和模式的同时进一步介绍了OOP。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_5'></a> 5<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4026035" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup5"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_5"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302488644&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302488644&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&5%2C5%2C">Java课程设计 / 耿祥义, 张跃平编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+耿祥义
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书以具有一定代表性的课程设计题目为框架, 从各个方面展示了Java在应用系统开发和网络开发中的实用技术, 特别体现了Java面向对象的设计思想。各个课程设计题目互相独立, 可以从任何一个课程设计题目开始阅读本书, 可以按照本书布置的课程设计作业来开发一个软件, 也可以参考这些课程设计题目设计类似的软件。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_6'></a> 6<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4026784" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4026784&FF=XJava&SORT=D&6%2C6%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup6"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_6"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302488941&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302488941&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&6%2C6%2C">Java程序开发案例课堂 / 刘春茂, 李琪编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+刘春茂
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+本书共分为25章, 内容包括: 揭开Java的神秘面纱--我的第一个Java程序; 零基础开始学习--Java基本语法; 主流的编程思想--认识面向对象编程; 嵌套类的秘密--Java的内部类; 特殊的元素合集--数组和方法; 不可不说的文本数据--字符串, 等等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_7'></a> 7<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4026786" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b4026786&FF=XJava&SORT=D&7%2C7%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup7"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_7"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302483571&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302483571&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&7%2C7%2C">Java语言程序设计 / 邵丽萍, 张驰编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+邵丽萍
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2018<br />
+<br />
+<span class="briefcitDetail">
+"本书全面介绍了Java语言的功能和特点, 主要包括Java语言基础知识、Java语法构成、面向对象编程技术, 常用系统类的使用、图形用户界面设计、图形处理、多媒体处理、异常处理、多线程技术和访问数据库技术等内容。本书以通俗易懂的语言介绍了大量的实例, 从使用的角度解释了Java面向对象编程思想, 介绍了Java编程技巧。"<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_8'></a> 8<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3922337" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3922337&FF=XJava&SORT=D&8%2C8%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup8"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_8"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302461074&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302461074&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&8%2C8%2C">Java Web轻量级框架项目化教程 / 缪勇, 施俊, 李新锋编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+缪勇
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书以电子商城项目开发为实例, 以MySQL数据库基础, 以MyEclipse2015为开发工具, 采用MVC结构开发模式, 介绍了Java Web轻量级框架开发技术的知识点。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_9'></a> 9<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3925234" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3925234&FF=XJava&SORT=D&9%2C9%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup9"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_9"><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115440365&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115440365&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&9%2C9%2C">Java线程与并发编程实践 / (美) Jeff Friesen著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+弗里森 (Friesen, Jeff)
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书是针对Java8中的线程特性和并发工具的快速学习和实践指南。全书共8章，分别介绍了Thread类和Runnable接口、同步、等待和通知、线程组、定时器框架、并发工具、同步器、锁框架，记以及高级并发工具等方面的主题。每章的末尾都以练习题的方式，帮助读者巩固所学的知识。附录A给出了所有练习题的解答，附录B给出了一个基于Swing线程的教程。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_10'></a> 10<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3918166" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup10"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_10"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121304934&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121304934&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&10%2C10%2C">Java微服务 / (美) Sourabh Sharma著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+夏尔马 (Sharma, Sourabh)
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书帮助你用Java构建供企业使用的微服务架构，内容包括微服务核心概念和框架、大型软件项目的高层次设计、开发环境设置和前期配置、对微服务架构持续集成的部署、实现微服务的安全性、有效地执行测试、微服务设计的最佳做法和一般原则，以及如何检测和调试问题。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_11'></a> 11<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3933803" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3933803&FF=XJava&SORT=D&11%2C11%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup11"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_11"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121309816&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121309816&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&11%2C11%2C">Java性能调优指南 / (美) Charlie Hunt ... [等] 著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+亨特 (Hunt, Charlie)
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_12'></a> 12<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3913860" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3913860&FF=XJava&SORT=D&12%2C12%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup12"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_12"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302450948&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302450948&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&12%2C12%2C">Java高级编程 / 魏勇编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+魏勇
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书将介绍注释文档自动生成、Java应用程序转换为操作系统平台直接运行的程序、实时监控程序的JMX技术、利用SVN版本控制等具有Java项目管理特征的技术作为第1章的开头。接下来的主要内容是在具有Java基础知识的前提下，学习如何利用Java类库实现数据结构的主要算法、Java网络编程、MINA框架、Java安全技术、远程对象调用、动态模块等内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_13'></a> 13<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3931782" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3931782&FF=XJava&SORT=D&13%2C13%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup13"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_13"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115443526&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115443526&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&13%2C13%2C">Java Web开发教程 / 丁毓峰, 毛雪涛编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+丁毓峰
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书具体包括Web的概念、计算机网络体系结构、HTTP协议、Java Web开发环境、JSP基础、 JSP中的文件操作、 Java web的数据库操作、Struts基础、Struts核心文件、Struts2基本方法和关键技术、Hibernate开发基础、Hibernate核心文件和接口、Spring基础、 Spring原理与技术、并且以综合实例的方式介绍了SSH集成方法及过程。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_14'></a> 14<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3933608" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3933608&FF=XJava&SORT=D&14%2C14%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup14"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_14"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302461999&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302461999&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&14%2C14%2C">新编Java语言程序设计 / 钱雪忠 ... [等] 编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+钱雪忠
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_15'></a> 15<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3895684" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3895684&FF=XJava&SORT=D&15%2C15%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup15"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_15"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302454786&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302454786&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&15%2C15%2C">Java程序设计 / 朱庆生, 古平主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+朱庆生
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书共分4篇: 第一篇介绍Java语言的基本机制和语法, 包括程序设计基础、数组, 类与对象、继承与多态、Java标准类库等。第二篇从实用的角度出发, 重点介绍Java的异常处理、输入/输出处理、多线程、Swing图形界面等。第三篇面向网络应用, 重点介绍URL与Socket通信技术、Web编程技术, JDBC技术、Web站点开发等。第四篇通过两个实例“学生信息管理系统”和“推箱子游戏”, 展示了Java的实用开发方法、过程、技巧等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_16'></a> 16<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3920372" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup16"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_16"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787111555599&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111555599&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&16%2C16%2C">Java Web程序设计 / 夏辉 ... [等] 编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+夏辉
+<br />
+<span class="briefcitDetail">
+北京 : 机械工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书内容包括：Java Web开发概述；Java Web开发前端静态技术；Java Web开发前端动态技术；Tomcat服务器；HTTP协议；JSP语法基础等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_17'></a> 17<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3945363" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup17"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_17"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302464259&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302464259&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&17%2C17%2C">Java 2实用教程 / 耿祥义, 张跃平编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+耿祥义
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书分别讲解了基本数据类型、枚举和数组、运算符、表达式和语句、类、对象和接口、面向对象的几个基本原则、重要的设计模式、常用实用类、Java Swing图形用户界面、对话框、Java输入输出流、泛型与集合框架、JDBC数据库操作、Java多线程机制、Java网络基础以及Java Applet等内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_18'></a> 18<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3945475" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3945475&FF=XJava&SORT=D&18%2C18%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup18"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_18"><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302459743&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302459743&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&18%2C18%2C">Java程序设计教程 / 张延军主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+张延军
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_19'></a> 19<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3945057" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup19"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_19"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787564352684&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787564352684&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&19%2C19%2C">JAVA开发实用技术 / 主编梁勇强, 蒙峭缘</a>
+</span>
+<br />
+<span class="briefcitDetail">
+梁勇强
+<br />
+<span class="briefcitDetail">
+成都 : 西南交通大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书是普通高等教育计算机专业课程用教材。编写目的是为地方本科院校计算机相关专业的Java面向对象程序设计课程教学提供一本针对性的教程：（1）内容选择方面。在考虑相对完整性的基础上，精选学生今后从事Java程序设计最基础、最常用的知识和技术；（2）案例设计方面。尽量选择与学生知识背景相关的案例，相关联的知识点尽量使用关联的案例，或者说是同一案例的不同版本。这样一来本书的适用性更好，有利于应用型人才培养的促成。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_20'></a> 20<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3926720" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3926720&FF=XJava&SORT=D&20%2C20%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup20"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_20"><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787519802301&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787519802301&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&20%2C20%2C">Java语言程序设计实用教程 / 王素琴主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+王素琴
+<br />
+<span class="briefcitDetail">
+北京 : 中国电力出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书在全面介绍Java语言语法知识的同时，注重对面向对象程序设计思想、Java核心机制与基本原理的阐述，主要内容包括Java语言概述、Java语言基础、类与对象、异常处理、基于Swing的图形用户界面设计、输入/输出流、数据库编程、多线程编程和网络编程。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_21'></a> 21<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3950915" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3950915&FF=XJava&SORT=D&21%2C21%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup21"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_21"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115448156&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115448156&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&21%2C21%2C">第一行代码Java / 李兴华, 马云涛著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+李兴华
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+全书分为15章，包括Java简介、程序基本概念、面向对象基本概念、面向对象高级知识、包及访问控制权限、异常的捕获及处理、Eclipse开发工具、Java新特性、多线程、Java常用类库、Java IO编程、Java网络编程、Java类集框架、Java数据库编程、DAO设计模式等内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_22'></a> 22<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3944875" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup22"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_22"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121310324&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121310324&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&22%2C22%2C">Java大学实用教程 / 耿祥义, 张跃平编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+耿祥义
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书加大了面向对象的知识容量，对部分例题的内容做了调整，增加了一些新的知识内容和例题。全书共分13章，重点讲解了类与对象、类的继承、接口的使用、SDK?1.5新推出的泛型、字符串与模式匹配、实用类及数据结构、多线程、输入/输出流、基于SWING的图形界面用户设计、网络编程、数据库操作、Java?Applet程序设计等内容。本书提供配套的电子课件和教学资源。本书有配套的学习指导书。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_23'></a> 23<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3933801" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup23"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_23"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121306488&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121306488&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&23%2C23%2C">持续轻量级Java EE开发 / (美) Andrew Lee Rubinger, Aslak Knutsen著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+鲁宾格 (Rubinger, Andrew Lee)
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_24'></a> 24<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3914279" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3914279&FF=XJava&SORT=D&24%2C24%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup24"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_24"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121305696&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121305696&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&24%2C24%2C">Java语言程序设计 / 姚晓玲 ... [等] 编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+姚晓玲
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+Java语言是面向对象的编程语言, 具有跨平台、安全、稳定以及多线程等优良特性, 在网络程序开发、移动程序开发方面使用广泛, 是目前最常用的编程语言之一。全书共分为15章, 分别介绍了Java的基本数据类型结构、语句、类与对象、方法、数组、类的深入探讨、继承与多态、接口、异常处理、Java常用类、图形用户界面、文件和流、线程等内容。本书注重面向对象的编程实践和问题分析能力的训练, 使用大量例题来帮助理解和应用知识, 并且对Java 8 的部分新特性进行了介绍。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_25'></a> 25<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3988364" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup25"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_25"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787111571698&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111571698&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&25%2C25%2C">Introduction to JAVA programming. Comprehensive version / Y. Daniel Liang</a>
+</span>
+<br />
+<span class="briefcitDetail">
+梁勇
+<br />
+<span class="briefcitDetail">
+北京 : 机械工业出版社, 2017-6-1<br />
+<br />
+<span class="briefcitDetail">
+本书是Java语言的经典教材，中文版分为《Java语言程序设计基础篇》和《Java语言程序设计进阶篇》，主要介绍程序设计基础、面向对象程序设计、算法和数据结构、GUI程序设计、高级Java程序设计等内容。本书以实例驱动的方式，贯彻问题解决的思想，帮助读者掌握Java语言的开发技术，并解决实际工程问题。基础篇从Java语言的特点入手，涵盖Java语言的语法、面向对象程序设计、图形用户界面设计等基础性内容。可作为高等院校Java程序设计课程的教材。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_26'></a> 26<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3989222" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3989222&FF=XJava&SORT=D&26%2C26%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup26"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_26"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121318474&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121318474&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&26%2C26%2C">Java EE互联网轻量级框架整合开发 / 杨开振 ... [等] 著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+杨开振
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书主要介绍当前Java互联网的主流框架SSM (Spring + Spring MVC + MyBatis, 简称SSM, 下同) 组合和Redis (NoSQL) 介绍, 这些是Java互联网的基础。首先介绍SSM的大概状况和各类技术在互联网中的作用, 和一些框架中常用的设计模式; 跟着详细SSM三大框架的应用和实现原理, 介绍原理的时候会结合设计模式一起探讨, 使得读者能够明了, 同时在Spring AOP技术中加入数据库技术中的隔离层, 和其传播行为的讨论, 使得读者更加明确如何使用Spring管理数据库事务。结合Java介绍Redis技术, 也是全国首创, 同时更符合Java开发者的需求。然后通过抢红包这样的热门话题讨论秒杀技术, 主要涉及互联网最重要, 最核心和最困难的问题高并发下的数据安全问题。最后给出一些常见的使用错误, 不良习惯, 典型应用和技巧, 帮助读者用好SSM框架。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_27'></a> 27<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3991561" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3991561&FF=XJava&SORT=D&27%2C27%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup27"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_27"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787517056621&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787517056621&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&27%2C27%2C">Java Web开发实战 / 主编肖睿, 高海波, 徐申</a>
+</span>
+<br />
+<span class="briefcitDetail">
+肖睿
+<br />
+<span class="briefcitDetail">
+北京 : 中国水利水电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书就紧紧围绕这三个技术对Web开发内容展开详细讲解，内容不仅涵盖前端开发必需的HTML5及CSS3技术、JavaScript、jQuery、Ajax等知识，也包含JSP技术的基本语法、使用JSP实现对Web请求的获取与响应、通过JSP实现与数据库的访问交互和基于Servlet的业务控制等知识，从而让大家循序渐进地学会如何开发属于自己的Web应用程序。为保证最优学习效果，本书紧密结合实际应用，利用大量案例说明和实践，提炼含金量十足的开发经验，最后还提供了和实际开发接近的项目案例。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_28'></a> 28<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4000688" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup28"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_28"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787564355692&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787564355692&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&28%2C28%2C">JAVA程序设计理实一体化教程 / 廖丽, 李学国主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+廖丽
+<br />
+<span class="briefcitDetail">
+成都 : 西南交通大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书共6个项目，以学生成绩管理系统、福利彩票竞猜小系统、图形化学生成绩管理系统、记事本、拼图游戏等项目为例，由浅入深，逐步介绍JAVA编程知识，让学生在实践中掌握企业所需要的JAVA工程师职业技能。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_29'></a> 29<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3960563" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3960563&FF=XJava&SORT=D&29%2C29%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup29"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_29"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302469360&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302469360&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&29%2C29%2C">Java中文文本信息处理 / 罗刚, 张子宪, 崔智杰编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+罗刚
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_30'></a> 30<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3960562" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup30"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_30"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787113228453&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787113228453&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&30%2C30%2C">Java面向对象程序设计教程 / 张志斌主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+张志斌
+<br />
+<span class="briefcitDetail">
+北京 : 中国铁道出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书是针对Java语言初学者编写的基础教程, 不仅讲解了Java程序设计的基础知识, 而且提供了大量实用性很强的编程实例。全书共分15章, 内容包括: 初识Java语言、Java语言基础、Java语言程序结构、数组、字符串、Java中的方法、类和对象、异常、Java常用类库、Java集合框架、Java文件操作、Java网络编程、Java中的线程、AWT与Swing、虚拟机中的内存管理。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_31'></a> 31<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4002530" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup31"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_31"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787563551026&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787563551026&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&31%2C31%2C">Java面向对象程序设计案例教程 / 谭义红主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+谭义红
+<br />
+<span class="briefcitDetail">
+北京 : 北京邮电大学出版社, 2017.8.1<br />
+<br />
+<span class="briefcitDetail">
+本书共分20讲，首先介绍了Java语言的基础知识(第1-4讲)：包括Java环境的搭建，Java程序的编辑、编译和执行，Java语言的基本语法知识；然后阐述面向对象设计思想及实现方法(第5-10讲)：包括面向对象程序设计中的类、对象、抽象、封装、继承、多态等概念，以及利用Java实现面向对象程序设计的方法；接着介绍Java语言的特色技术(第11-20讲)：包括异常处理与File类、I/O输入输出、多线程、图形用户界面、数据库编程接口、网络编程、常见类库等知识及实现方法。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_32'></a> 32<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b4002531" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup32"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_32"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787516513057&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787516513057&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&32%2C32%2C">Java项目开发实训教程 / 宗哲玲主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+宗哲玲
+<br />
+<span class="briefcitDetail">
+北京 : 航空工业出版社, 2017.8.1<br />
+<br />
+<span class="briefcitDetail">
+本书通过一个桌面应用软件“图书管理系统”的设计与实现，让学生从软件工程的角度出发，按照项目的开发流程，系统地、全面地理解和体验Java项目开发过程。全书共分为10个阶段：项目启动、系统分析、系统设计、系统详细设计与编码概述、数据库设计与实现、模型层设计与实现、控制层设计与实现、视图层设计与实现、系统测试、系统部署。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_33'></a> 33<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3945474" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3945474&FF=XJava&SORT=D&33%2C33%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup33"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_33"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302463221&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302463221&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&33%2C33%2C">Java程序设计 / 赖小平主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+赖小平
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书主要介绍Java语言概述、Java语法基础、Java程序流程控制、数组与字符串、类与对象、类的继承与多态、抽象类与接口、异常处理、文件的读写、Java SE API常用类、泛型与集合、图形用户界面GUI、JDBC数据库编程、多线程和Java网络编程等内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_34'></a> 34<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974216" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3974216&FF=XJava&SORT=D&34%2C34%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup34"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_34"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302468097&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302468097&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&34%2C34%2C">Java EE架构开发案例教程 / 曾祥萍, 田景贺, 杨弘平编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+曾祥萍
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书是笔者在十几年教学与项目实践中构建的一个完整的知识体系, 全面的介绍了Java EE 的相关知识, 并在此基础上详细的介绍了SSH框架技术, 知识点全面, 由浅入深, 代码浅显易懂, 案例丰富。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_35'></a> 35<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974253" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup35"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_35"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302473701&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302473701&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&35%2C35%2C">Java程序设计教程与项目实训 / 温秀梅, 司亚超主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+温秀梅
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书由三个部分组成：第一部分（第1～6章、第8章）对Java基本特性、面向对象程序设计知识、语法进行了较为系统的介绍；第二部分（第7章、第9～12章）是关于Java Applet编程、图形用户界面、网络编程及数据库技术等内容的介绍；第三部分为项目实训；第四部分是本书的附录部分，包括有实验、课程设计及模拟题等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_36'></a> 36<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974274" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3974274&FF=XJava&SORT=D&36%2C36%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup36"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_36"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302470632&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302470632&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&36%2C36%2C">可视化Java SWT/JFace GUI程序设计教程 / 赵满来编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+赵满来
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书以最新版的Eclipse为开发环境，使用WindowBuilder插件为可视化开发工具，采用SWT/JFace GUI组件库，结合学生成绩管理系统和资源管理器式文本阅读器等实例程序的逐步设计过程，详细讲解了 窗口、基本组件、布局管理、容器、事件处理、菜单、工具栏、对话框、表格和树等组件的可视化创建、属性设 置、事件处理及其在Java GUI程序设计中的应用，介绍了Java GUI程序的设计思路、可视化快速开发方法 和步骤，以及必要的相关知识、原理和开发工具的基本使用方法与技巧。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_37'></a> 37<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974133" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3974133&FF=XJava&SORT=D&37%2C37%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup37"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_37"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302471165&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302471165&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&37%2C37%2C">Java Web程序设计教程 / 张永宾, 辛宇, 王攀编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+张永宾
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书首先对Java高级编程知识做了详细的介绍，包括Java常用工具类、集合框架、JDBC编程技术以及Java对XML编程技术。然后开始对JSP网页编程技术进行较详细的介绍，包括HTML基础、CSS样式表的应用、JavaScript脚本语言以及JSP相关的编程技术（如JSP基础、JavaBean编程、Servlet编程以及Filter等），还介绍了EL和JSTL编程技术。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_38'></a> 38<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974290" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup38"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_38"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302475156&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302475156&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&38%2C38%2C">Java技术及应用 / 赵锐, 李卫华编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+赵锐
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书分为十二章，内容包括：Java基础、面象对象结构、Iambda表达式及其应用、常用实用类、增强性能类、输入输出流、收集与数据结构应用、小程序及多媒体应用、图形用户界面及桌面应用、JDBC与数据库应用、网络与Web服务应用等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_39'></a> 39<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3989218" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup39"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_39"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115458865&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115458865&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&39%2C39%2C">Core Java. Cay S. Horstmann著.</a>
+</span>
+<br />
+<span class="briefcitDetail">
+Horstmann, Cay S., 1959-
+<br />
+<span class="briefcitDetail">
+北京 : Posts & Telecom Press, 2017.<br />
+<br />
+<span class="briefcitDetail">
+<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_40'></a> 40<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3922341" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup40"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_40"><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 5 stars out of 5 based on 1 ratings" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121306761&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121306761&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&40%2C40%2C">Java程序设计实验指导 / 主编高永平</a>
+</span>
+<br />
+<span class="briefcitDetail">
+高永平
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书是一部双语实验教材, 在教材中提供了相应内容的英文和中文 ; 每一章开始首先对本章主要的知识点给出了概括和精辟的讲解与分析, 同时给出1-2个综合性的例题 ; 在实验部分围绕本章的重点、难点知识合理选择实验题目, 同时给出了实验的参考答案和运行结果。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_41'></a> 41<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3918165" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3918165&FF=XJava&SORT=D&41%2C41%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup41"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_41"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787121301421&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121301421&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&41%2C41%2C">深度解析Java游戏服务器开发 / 何金成编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+何金成
+<br />
+<span class="briefcitDetail">
+北京 : 电子工业出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书从游戏的行业分析、Java技术、游戏逻辑、数据库技术、网络理论、服务器技术、架构分析、系统优化等方面对游戏服务器开发做了全面解析，并对目前市面较热门的游戏进行分析，从行业到理论到技术，再到架构到实战。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_42'></a> 42<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974238" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup42"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_42"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302473114&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302473114&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&42%2C42%2C">Java程序设计与项目实训教程 / 张志锋 ... 等编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+张志锋
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书共十二章, 主要内容包括: Java语言的基础知识、Java的常用开发工具、Java语言的基础语法、Java核心技术、Java语言的异常处理、Java语言的图形用户界面组件、数据库编程技术、流与文件、多线性以及网络编程技术。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_43'></a> 43<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3974034" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3974034&FF=XJava&SORT=D&43%2C43%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup43"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_43"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302462477&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302462477&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&43%2C43%2C">Java从入门到精通 / 明日科技编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+明日科技
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书从初学者的角度出发, 通过通俗易懂的语言、丰富多彩的实例, 详细介绍了进行Java应用程序开发应该掌握的各方面技术。全书共21章, 包括初识Java, 熟悉Eclipse开发工具, Java语言基础, 流程控制, 数组, 字符串, 类和对象, 接口、继承与多态, 类的高级特性, Java集合类, 异常处理, 输入/输出, Swing程序设计, 高级事件处理, 多线程, 网络通信, JDBC操作数据库, Swing高级组件等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_44'></a> 44<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3992224" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3992224&FF=XJava&SORT=D&44%2C44%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup44"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_44"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115466808&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115466808&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&44%2C44%2C">Java机器学习 / (斯洛文尼亚) Bostjan Kaluza著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+卡鲁扎 (Kaluza, Bostjan)
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书提供机器学习所需的技术与工具, 使读者快速地深入了解复杂数据。先学习如何将机器学习方法应用于各种常见任务, 包括分类、预测预报、购物篮分析与聚类。进而学习如何检测异常、欺诈, 如何进行行为识别、图像识别以及文本分析。最后介绍相关Web资源、各种技术研讨会议, 以及机器学习挑战赛, 帮助读者进入下一学习阶段。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_45'></a> 45<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3923360" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3923360&FF=XJava&SORT=D&45%2C45%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup45"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_45"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115439369&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115439369&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&45%2C45%2C">Java Web程序设计任务教程 / 黑马程序员编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+黑马程序员
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书共15章，详细讲解了网页开发的基础知识和Java Web开发的重要知识，其中网页开发基础知识包括HTML技术、CSS技术和JavaScript技术，而Java Web的进阶知识包括Servlet技术、会话技术、JSP技术，以及JDBC和数据库连接池等技术。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_46'></a> 46<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3991098" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup46"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_46"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787568239936&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787568239936&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&46%2C46%2C">Java开发技术任务驱动式教程 / 庾佳, 朱翠苗主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+庾佳
+<br />
+<span class="briefcitDetail">
+北京 : 北京理工大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书从Java程序开发能力必备出发，将教学内容分为3个单元，语言基础、技术基础、技能基础，所有章节以此贯穿。每一章均以相应知识点储备、案例分析、任务训练、知识拓展、思考与练习进行组织。每一章节中的案例以通俗易懂、实用为原则，在组织形式上以任务驱动、效果演示来<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_47'></a> 47<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3992984" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup47"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_47"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302474180&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302474180&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&47%2C47%2C">Java EE程序设计与应用开发 / 郭克华, 唐雅媛, 扈乐华主编</a>
+</span>
+<br />
+<span class="briefcitDetail">
+郭克华
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书共20章分为6部分，包括Java EE开发环境配置、JDBC开发、Web开发、轻量级框架开发、重量级框架开发和其他内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_48'></a> 48<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3991101" >
+<br />
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup48"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_48"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787517055662&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787517055662&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&48%2C48%2C">Java核心API编程 / 主编肖睿, 禹晨, 马凌</a>
+</span>
+<br />
+<span class="briefcitDetail">
+肖睿
+<br />
+<span class="briefcitDetail">
+北京 : 中国水利水电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书深入探究Java高级实用技术的内容，从而进一步强化Java开发技能。主要内容包括集合框架、泛型、实用类、输入输出处理、多线程、Socket网络编程、XML解析等。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_49'></a> 49<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3991092" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3991092&FF=XJava&SORT=D&49%2C49%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup49"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_49"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787115461025&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115461025&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&49%2C49%2C">Java EE企业级应用开发教程 / 黑马程序员编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+黑马程序员
+<br />
+<span class="briefcitDetail">
+北京 : 人民邮电出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书详细讲解了Java EE中Spring、Spring MVC和MyBatis三大框架(以下简称“SSM”)的基本知识和应用。本书在对知识点进行描述时采用了大量案例，可以更好地帮助读者学习和理解SSM的核心技术。 本书共18章，第1̃5章主要讲解Spring的基本知识和应用，其中包括Spring的基本应用、Spring中的Bean、Spring AOP、Spring的数据库开发以及Spring的事务管理。第6̃10章主要讲解了MyBatis的相关知识，其中包含初识MyBatis、MyBatis的核心配置、动态SQL、MyBatis的关联映射以及MyBatis与Spring的整合。第11～17章主要讲解了Spring MVC的相关知识，其中包含Spring MVC入门，Spring MVC的核心类和注解，数据绑定，JSON数据交互和RESTful支持，拦截器，文件上传和下载以及SSM框架整合。第18章讲解整个SSM框架的总结与综合运用，全章通过一个BOOT客户管理系统案例，贴近实际地讲解了开发中SSM框架的应用。读者掌握了SSM框架技术，就能很好地适应企业开发的技术需求，为大型项目的开发奠定基础。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_50'></a> 50<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3991563" >
+<br />
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CC/requestbrowse~b3991563&FF=XJava&SORT=D&50%2C50%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+<span id="rategroup50"><a href="/patroninfo*chx/0/redirect=/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse#anchor_50"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+<a href="http://book.duxiu.com/search?sw=9787302473169&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302473169&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/frameset&FF=XJava&SORT=D&50%2C50%2C">Java程序设计精编教程 / 耿祥义, 张跃平编著</a>
+</span>
+<br />
+<span class="briefcitDetail">
+耿祥义
+<br />
+<span class="briefcitDetail">
+北京 : 清华大学出版社, 2017<br />
+<br />
+<span class="briefcitDetail">
+本书分别讲解了基本数据类型、枚举和数组、运算符、表达式和语句、类、对象和接口、面向对象的几个基本原则、重要的设计模式、常用实用类、Java Swing图形用户界面、对话框、Java输入输出流、泛型与集合框架、JDBC数据库操作、Java多线程机制、Java网络基础以及Java Applet等内容。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5"  class="browseSaveJump" width="100%">
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked_chx.gif" alt="Save marked records" class="button" width="120" height="20" border="0" /></a>
+<span name='save_page_btn2' id='save_page_btn2' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage_chx.gif" alt="Save all on page" class="button" width="120" height="20" border="0" /></a>
+</span>
+</form>
+
+<form action="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse/indexsort=D" method="POST">
+<input type="HIDDEN" name="jumpref" value="XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/1%2C4306%2C4306%2CB/browse">
+<script type="text/JavaScript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><img src="/screens/locateinresults_chx.gif" alt="Locate in results" class="button" width="120" height="20" border="0" /></a>
+
+
+
+<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
+<input type="TEXT" name="jumpto" value="4306" size="4" maxlength="4">
+</form>
+
+</td></tr>
+
+
+</td>
+</tr>
+</table>
+<!-- END BROWSELIST/BRIEFCIT AREA -->
+</td>
+<!-- END BROWSE SCREEN LEFT CELL -->
+
+<!-- BEGIN BROWSE SCREEN RIGHT CELL -->
+<td valign="top" width="%">
+<div valign="top"  class="browseResourceTable">
+
+<!-- BEGIN RESOURCE TABLE -->
+<table width="100%"  class="browseResourceTable" cellpadding="0" cellspacing="0" border="0">
+<tr class="browseResourceTableHeader">
+<td class="browseResourceTableHeader"><em></em></td></tr>
+</table>
+<!-- END RESOURCE TABLE -->
+
+</div>
+
+</td>
+<!-- END BROWSE SCREEN RIGHT CELL -->
+</tr>
+
+<!-- BEGIN BOTTOM BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+结果页&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/51%2C4306%2C4306%2CB/browse">2</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/101%2C4306%2C4306%2CB/browse">3</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/151%2C4306%2C4306%2CB/browse">4</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/201%2C4306%2C4306%2CB/browse">5</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/251%2C4306%2C4306%2CB/browse">6</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/301%2C4306%2C4306%2CB/browse">7</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/351%2C4306%2C4306%2CB/browse">8</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/401%2C4306%2C4306%2CB/browse">9</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/451%2C4306%2C4306%2CB/browse">10</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/501%2C4306%2C4306%2CB/browse">11</a>
+...
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/4301%2C4306%2C4306%2CB/browse">87</a>
+<a href="/search*chx?/XJava&SORT=D/XJava&SORT=D&SUBKEY=Java/51%2C4306%2C4306%2CB/browse">后一页</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BOTTOM BROWSE PAGER -->
+</table>
+<!-- END BROWSE SCREEN TABLE -->
+<div align="center" class="navigationRow">
+<form>
+<a href="/search~S0*chx"><img src="/screens/startover_chx.gif" alt="重新检索" border="0" /></a>
+<a href="/search*chx/X?NOSRCH=Java&SORT=D&SUBKEY=Java"><img src="/screens/modify_chx.gif" alt="修改检索" border="0" /></a>
+<a href="/search*chx/X"><img src="/screens/another_chx.gif" alt="再次检索" border="0" /></a>
+<select name=HISTORY onChange="onSelectChange(this, '*chx')"><option value="">(检索历史)</option>
+<OPTION VALUE="XJava&SORT=D">关键词: Java
+<option value="+/search*chx/X?Java&SORT=D&clear_history">(清除检索历史)</option>
+<option value="+/*chx">(结束检索进程)</option>
+</select>
+</form>
+</div>
+
+
+<!-- begin botlogo.html file -->
+<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
+<!-- This file last changed: 20 April, 2006 -->
+<br />
+<!--Begin the bottom logo table-->
+<div id="botnav">
+<ul class="botmenuLinks">
+<li><a href="http://ch4gj9pm7p.search.serialssolutions.com/">电子资源导航</a></li>
+<li class="breaker">|</li>
+<li><a href="/screens/springerebook.html">Springer外文全文电子图书</a></li>
+<li class="breaker">|</li>
+<li><a href="/screens/edurecommend.html">大学生必读书目</a></li>
+</ul>
+</div>
+<div align="center" >最佳显示模式----IE9.0及以上浏览器，分辨率1024x768</div>
+<!--End the bottom logo table-->
+<!-- end botlogo.html file -->
+
+</body>
+</html>

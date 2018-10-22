@@ -13,9 +13,9 @@
 
 int main(int argc, char **argv)
 {
-    char send_msg[50] = "hello, socket!";
-    char recv_msg[50];
+    char send_msg[] = "hello, socket!";
+    char recv_msg[51];
 
-    connect_to_server(send_msg, strlen(send_msg) * sizeof(char), recv_msg, 49);
+    connect_to_server(send_msg, strlen(send_msg) * sizeof(char), recv_msg, 50);
 }
 

@@ -1,0 +1,6842 @@
+HTTP/1.1 200 OK
+Date: Fri, 19 Oct 2018 09:30:37 GMT
+Server: III 100
+Pragma: no-cache
+Cache-control: no-store
+Content-Type: text/html; charset=UTF-8
+Expires: Fri, 19 Oct 2018 09:30:37 GMT
+Set-Cookie: SESSION_LANGUAGE=chx; path=/; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: III_EXPT_FILE=aa22527; path=/; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: III_SESSION_ID=872dc826595832e78570fe05580ab928; domain=.lib.hust.edu.cn; path=/
+Set-Cookie: SESSION_SCOPE=0; path=/
+Vary: Accept-Encoding,User-Agent
+Connection: close
+Transfer-Encoding: chunked
+
+1000
+<html   dir="LTR">
+<head>
+<title>华中科技大学</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/styles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/features.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!--[if lte IE 8]><link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" /><![endif]-->
+</head>
+<body bgcolor="#FFFFFF" >
+<!-- begin toplogo.html file -->
+<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
+<!-- This file last changed: 20 April, 2006 -->
+<div id="topLogohead">
+<div id="topID">
+	<div align="right">
+		<ul>
+			<li><a href="/patroninfo*chx">个人信息登录</a></li>
+			<li class="breaker">|</li>
+			<li><a href="http://202.114.9.3/ArticleChannel.aspx?ChannelID=99">推荐购买</a></li>
+			<li class="breaker">|</li>
+		   
+			<li><a href="/screens/help_index_chx.html">帮助</a></li>
+			<li class="breaker">|</li>
+			<li><a href="http://202.114.9.3">图书馆主页</a></li>
+			<li class="breaker">|</li>
+			<li><a href="/*eng">English Version</a></li>
+		</ul>
+	</div>
+</div>
+<div style="float:left;">
+	<div id="topLogoImage"><a href="/"><img src="/screens/logo_chx.gif" width="500" height="40" border="0" alt="Innopac of Library, HUST." /></a></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<!--end toplogo.html-->
+
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(6000000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id=TimeoutSeconds>0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+<meta http-equiv="Refresh" content="6000;URL=/" />
+</noscript>
+<div align="center" class="navigationRow">
+<form>
+<a href="/search~S0*chx"><img src="/screens/startover_chx.gif" alt="重新检索" border="0" /></a>
+<a href="/search*chx/X?NOSRCH=c++&SORT=D&SUBKEY=c++"><img src="/screens/modify_chx.gif" alt="修改检索" border="0" /></a>
+<a href="/search*chx/X"><img src="/screens/another_chx.gif" alt="再次检索" border="0" /></a>
+<select name=HISTORY onChange="onSelectChange(this, '*chx')"><option value="">(检索历史)</option>
+<OPTION VALUE="Xc++&SORT=D">关键词: c  
+<option value="+/search*chx/X?c++&SORT=D&clear_history">(清除检索历史)</option>
+<option value="+/*chx">(结束检索进程)</option>
+</select>
+<noscript>
+<h2>搜索历史功能需要JavaScript。</h2>
+</noscript>
+</form>
+</div>
+
+<!-- BEGIN BROWSE SCREEN TABLE -->
+<table width="100%" cellpadding="2" cellspacing="0" border="0" class="browseScreen">
+<!-- BEGIN SEARCH WIDGET -->
+<div align="center">
+<tr align="center" valign="middle">
+<td valign="middle" colspan="2">
+<div  class="browseSearchtool">
+<script type="text/JavaScript">
+<!-- Hide the JS
+var savedScope;
+var savedTag;
+var savedSearch;
+var sortButtonText = null;
+var savedExactSearch = null;
+var sortButtonEvent = null;
+var sortExactBrowseURL = null;
+var sortTypes = new Array();
+var sortLabels = new Array();
+sortTypes[0] = "t";
+sortLabels[0] = "题名";
+sortTypes[1] = "a";
+sortLabels[1] = "作者";
+sortTypes[2] = "r";
+sortLabels[2] = "出版时间";
+sortTypes[3] = "n";
+sortLabels[3] = "索书号";
+sortLabels[4] = "系统排序";
+sortTypes[4] = "-";
+var sortSelectedValue = "4";
+var nonSortTags = "XYZprWw"
+// Unhide the JS -->
+</script>
+<form name="searchtool" target="_self" action="/search*chx/" method='GET'>
+      <label for="searchtype" style="display:none;">SearchType</label> <select name="searchtype" id="searchtype" onChange="initSort()">
+   
+2000
+     <option value="X" selected="selected"> 关键词</option>
+        <option value="a"> 作者</option>
+        <option value="t"> 题名</option>
+        <option value="d"> 主题</option>
+        <option value="c"> 索书号</option>
+      </select>
+      &nbsp;
+      <label for="searcharg" style="display:none;">Search</label><input type="text" name="searcharg" id="searcharg" size="30" onchange='return searchtoolSubmitAction()'maxlength="75" value="c  " />
+      &nbsp;
+
+<span id="sort_cell">
+</span>
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+initSort();
+// Unhide the JS -->
+</script>
+      <input type="hidden" name="SORT" value="DZ" /><input type="hidden" name="extended" value="0" />      <input type="submit" name="SUBMIT" value="检索" onclick='return searchtoolSubmitAction();' />
+<div>
+      <input type="checkbox" name="availlim" value="1"  /> <span class="availLimMessage">限定在可出借馆藏中查询</span><br/>
+</div>
+<div>
+      <input type="hidden" name="searchlimits" value="" />
+      <input type="hidden" name="searchorigarg" value="Xc  &SORT=D" />
+</div>
+</form>
+<div  class="browseSearchtoolMessage">       <i>找到 32000 条记录 </i>排序依据  <strong>相关度</strong>  | <a href="/search*chx/X?c++&SORT=DX">日期</a>  | <a href="/search*chx/X?c++&SORT=AX">题名</a> .
+</div>
+<div></div></div>
+
+</td>
+</tr>
+</div>
+<!-- END SEARCH WIDGET -->
+
+<!-- BEGIN BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+结果页&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/51%2C32000%2C32000%2CB/browse">2</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/101%2C32000%2C32000%2CB/browse">3</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/151%2C32000%2C32000%2CB/browse">4</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/201%2C32000%2C32000%2CB/browse">5</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/251%2C32000%2C32000%2CB/browse">6</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/301%2C32000%2C32000%2CB/browse">7</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/351%2C32000%2C32000%2CB/browse">8</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/401%2C32000%2C32000%2CB/browse">9</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/451%2C32000%2C32000%2CB/browse">10</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/501%2C32000%2C32000%2CB/browse">11</a>
+...
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/31951%2C32000%2C32000%2CB/browse">640</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/51%2C32000%2C32000%2CB/browse">后一页</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BROWSE PAGER -->
+
+<style type="text/css">
+<!--
+#rategroup1 { display: inline }
+#rateneed1  { display: none }
+#rategroupMy1 { display: none }
+#ratemy1      { display: inline }
+#rategroup2 { display: inline }
+#rateneed2  { display: none }
+#rategroupMy2 { display: none }
+#ratemy2      { display: inline }
+#rategroup3 { display: inline }
+#rateneed3  { display: none }
+#rategroupMy3 { display: none }
+#ratemy3      { display: inline }
+#rategroup4 { display: inline }
+#rateneed4  { display: none }
+#rategroupMy4 { display: none }
+#ratemy4      { display: inline }
+#rategroup5 { display: inline }
+#rateneed5  { display: none }
+#rategroupMy5 { display: none }
+#ratemy5      { display: inline }
+#rategroup6 { display: inline }
+#rateneed6  { display: none }
+#rategroupMy6 { display: none }
+#ratemy6      { display: inline }
+#rategroup7 { display: inline }
+#rateneed7  { display: none }
+#rategroupMy7 { display: none }
+#ratemy7      { display: inline }
+#rategroup8 { display: inline }
+#rateneed8  { display: none }
+#rategroupMy8 { display: none }
+#ratemy8      { display: inline }
+#rategroup9 { display: inline }
+#rateneed9  { display: none }
+#rategroupMy9 { display: none }
+#ratemy9      { display: inline }
+#rategroup10 { display: inline }
+#rateneed10  { display: none }
+#rategroupMy10 { display: none }
+#ratemy10      { display: inline }
+#rategroup11 { display: inline }
+#rateneed11  { display: none }
+#rategroupMy11 { display: none }
+#ratemy11      { display: inline }
+#rategroup12 { display: inline }
+#rateneed12  { display: none }
+#rategroupMy12 { display: none }
+#ratemy12      { display: inline }
+#rategroup13 { display: inline }
+#rateneed13  { display: none }
+#rategroupMy13 { display: none }
+#ratemy13      { display: inline }
+#rategroup14 { display: inline }
+#rateneed14  { display: none }
+#rategroupMy14 { display: none }
+#ratemy14      { display: inline }
+#rategroup15 { display: inline }
+#rateneed15  { display: none }
+#rategroupMy15 { display: none }
+#ratemy15      { display: inline }
+#rategroup16 { display: inline }
+#rateneed16  { display: none }
+#rategroupMy16 { display: none }
+#ratemy16      { display: inline }
+#rategroup17 { display: inline }
+#rateneed17  { display: none }
+#rategroupMy17 { display: none }
+#ratemy17      { display: inline }
+#rategroup18 { display: inline }
+#rateneed18  { display: none }
+#rategroupMy18 { display: none }
+#ratemy18      { display: inline }
+#rategroup19 { display: inline }
+#rateneed19  { display: none }
+#rategroupMy19 { display: none }
+#ratemy19      { display: inline }
+#rategroup20 { display: inline }
+#rateneed20  { display: none }
+#rategroupMy20 { display: none }
+#ratemy20      { display: inline }
+#rategroup21 { display: inline }
+#rateneed21  { display: none }
+#rategroupMy21 { display: none }
+#ratemy21      { display: inline }
+#rategroup22 { display: inline }
+#rateneed22  { display: none }
+#rategroupMy22 { display: none }
+#ratemy22      { display: inline }
+#rategroup23 { display: inline }
+#rateneed23  { display: none }
+#rategroupMy23 { display: none }
+#ratemy23      { display: inline }
+#rategroup24 { display: inline }
+#rateneed24  { display: none }
+#rategroupMy24 { display: none }
+#ratemy24      { display: inline }
+#rategroup25 { display: inline }
+#rateneed25  { display: none }
+#rategroupMy25 { display: none }
+#ratemy25      { display: inline }
+#rategroup26 { display: inline }
+#rateneed26  { display: none }
+#rategroupMy26 { display: none }
+#ratemy26      { display: inline }
+#rategroup27 { display: inline }
+#rateneed27  { display: none }
+#rategroupMy27 { display: none }
+#ratemy27      { display: inline }
+#rategroup28 { display: inline }
+#rateneed28  { display: none }
+#rategroupMy28 { display: none }
+#ratemy28      { display: inline }
+#rategroup29 { display: inline }
+#rateneed29  { display: none }
+#rategroupMy29 { display: none }
+#ratemy29      { display: inline }
+#rategroup30 { display: inline }
+#rateneed30  { display: none }
+#rategroupMy30 { display: none }
+#ratemy30      { display: inline }
+#rategroup31 { display: inline }
+#rateneed31  { display: none }
+#rategroupMy31 { display: none }
+#ratemy31      { display: inline }
+#rategroup32 { display: inline }
+#rateneed32  { display: none }
+#rategroupMy32 { display: none }
+#ratemy32      { display: inline }
+#rategroup33 { display: inline }
+#rateneed33  { display: none }
+#rategroupMy33 { display: none }
+#ratemy33      { display: inline }
+#rategroup34 { display: inline }
+#rateneed34  { display: none }
+#rategroupMy34 { display: none }
+#ratemy34      { display: inline }
+#rategroup35 { display: inline }
+#rateneed35  { display: none }
+#rategroupMy35 { display: none }
+#ratemy35      { display: inline }
+#rategroup36 { display: inline }
+#rateneed36  { display: none }
+#rategroupMy36 { display: none }
+#ratemy36      { display: inline }
+#rategroup37 { display: inline }
+#rateneed37  { display: none }
+#rategroupMy37 { display: none }
+#ratemy37      { display: inline }
+#rategroup38 { display: inline }
+#rateneed38  { display: none }
+#rategroupMy38 { display: none }
+#ratemy38      { display: inline }
+#rategroup39 { display: inline }
+#rateneed39  { display: none }
+#rategroupMy39 { display: none }
+#ratemy39      { display: inline }
+#rategroup40 { display: inline }
+#rateneed40  { display: none }
+#rategroupMy40 { display: none }
+#ratemy40      { display: inline }
+#rategroup41 { display: inline }
+#rateneed41  { display: none }
+#rategroupMy41 { display: none }
+#ratemy41  
+a4d
+    { display: inline }
+#rategroup42 { display: inline }
+#rateneed42  { display: none }
+#rategroupMy42 { display: none }
+#ratemy42      { display: inline }
+#rategroup43 { display: inline }
+#rateneed43  { display: none }
+#rategroupMy43 { display: none }
+#ratemy43      { display: inline }
+#rategroup44 { display: inline }
+#rateneed44  { display: none }
+#rategroupMy44 { display: none }
+#ratemy44      { display: inline }
+#rategroup45 { display: inline }
+#rateneed45  { display: none }
+#rategroupMy45 { display: none }
+#ratemy45      { display: inline }
+#rategroup46 { display: inline }
+#rateneed46  { display: none }
+#rategroupMy46 { display: none }
+#ratemy46      { display: inline }
+#rategroup47 { display: inline }
+#rateneed47  { display: none }
+#rategroupMy47 { display: none }
+#ratemy47      { display: inline }
+#rategroup48 { display: inline }
+#rateneed48  { display: none }
+#rategroupMy48 { display: none }
+#ratemy48      { display: inline }
+#rategroup49 { display: inline }
+#rateneed49  { display: none }
+#rategroupMy49 { display: none }
+#ratemy49      { display: inline }
+#rategroup50 { display: inline }
+#rateneed50  { display: none }
+#rategroupMy50 { display: none }
+#ratemy50      { display: inline }
+-->
+</style>
+<!-- BEGIN BROWSE SCREEN LEFT CELL: BROWSELIST/BRIEFCIT AREA -->
+<tr><td>
+<table border="0" cellpadding="3" width="100%">
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5"  class="browseSaveJump" width="100%">
+<form method="POST" action="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse" name="export_form" id="export_form" >
+<input type="hidden" name="jumpref" value="Xc++">
+<input type="hidden" id="save_func" name="save_func" value=""/>
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked_chx.gif" alt="Save marked records" class="button" width="120" height="20" border="0" /></a>
+<span name='save_page_btn1' id='save_page_btn1' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage_chx.gif" alt="Save all on page" class="button" width="120" height="20" border="0" /></a>
+</span>
+<span name='mylist_btn1' id='mylist_btn1' style='visibility: visible' ><a href="#" onclick="save_to_mylist();">
+保存至我的收藏夹</a>
+</span>
+</td></tr>
+
+
+</td>
+</tr>
+<tr  class="browseHeader">
+<td align="center" class="browseHeaderData">
+关键词 (1-50 共 32000)
+</td>
+</tr>
+<!-- Right Result rank 1 -->
+<tr  class="browseSuperEntry browseEntryRelGroup1"><td colspan="1"><img src="/screens/relevance5.gif" alt="">&nbsp;最相关题名&nbsp;1-3542 条记录</td></tr>
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_1'></a> 1<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4025823" >
+
+7
+<br />
+
+105
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b4025823&FF=Xc++&SORT=D&1%2C1%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+10e
+
+<span id="rategroup1"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_1"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+8
+<br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787115460950&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115460950&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&1%2C1%2C">C程序设计新思维 / (美) 本·克莱蒙著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1b
+克莱门斯 (Klemens, Ben)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2018
+7
+<br />
+
+7
+<br />
+
+288
+<span class="briefcitDetail">
+本书展现了传统C语言教科书所不具有相关技术。全书分为开发环境和语言两个部分，从编译、调试、测试、打包、版本控制等角度，以及指针、语法、文本、结构、面向对象编程、函数库等方面，对C程序设计的核心知识进行查缺补漏和反思。本书鼓励读者放弃那些对大型机才有意义的旧习惯，拿起新的工具来使用这门与时俱进的简洁语言。<br />
+&nbsp;<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+ <img src="/screens/media_book.gif" alt="专著"></tr>
+</table>
+</td>
+</tr>
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_2'></a> 2<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4026371" >
+
+7
+<br />
+
+fe
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b4026371&FF=Xc++&SORT=D&2%2C2%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+10e
+
+<span id="rategroup2"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_2"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787305196348&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787305196348&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a7
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&2%2C2%2C">C语言程序设计 / 主编马杰, 刘艳, 杨磊</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+马杰
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+南京 : 南京大学出版社, 2018
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+bb
+本书主要内容包括: 程序设计与算法, 数据类型、运算符与表达式, 程序控制语句, 数组, 函数, 指针, 结构体与共用体, 输入输出和文件系统等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_3'></a> 3<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4026775" >
+
+7
+<br />
+
+105
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b4026775&FF=Xc++&SORT=D&3%2C3%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+116
+
+<span id="rategroup3"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_3"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302486879&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302486879&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b6
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&3%2C3%2C">C语言程序设计案例实践 / 李丹程, 刘莹, 那俊编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+李丹程
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2018
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+164
+本书涵盖了C语言的重要基础知识, 重点放在C语言的综合运用上, 通过详细实例, 结合具体的实际应用需求, 循序渐进地启发学生独立完成实践题目, 培养学生实际分析问题、解决问题和动手能力。本书设计了十个信息管理实例项目, 以满足不同学校和学生的程序实践要求。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_4'></a> 4<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4026777" >
+
+7
+<br />
+
+fe
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b4026777&FF=Xc++&SORT=D&4%2C4%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+116
+
+<span id="rategroup4"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_4"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302483694&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302483694&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&4%2C4%2C">C语言习题、实验指导及课程设计 / 徐英慧主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+徐英慧
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2018
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1cc
+按照语言类学习的特点, 结合编者多年在一年级新生中进行C语言教学的丰富经验, 编写出的一本适合非计算机类专业的大学生学习C语言的教材。教材本身配有精选出来的配合理解C语言的各种类型的习题, 结合为本书配套的《C语言习题及实验和课程设计指导书》, 向学生提供更多与当前各类考试中常见的C语言考试题型相似的习题和考试真题供练习。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_5'></a> 5<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3919955" >
+
+7
+<br />
+
+105
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3919955&FF=Xc++&SORT=D&5%2C5%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+30c
+
+<span id="rategroup5"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_5"><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 3 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 3 stars out of 5 based on 1 ratings" /><img src="/screens/rate_group_chx.gif" border="0" width="15" height="14" title="Rated 3 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad_chx.gif" border="0" width="15" height="14" title="Rated 3 stars out of 5 based on 1 ratings" /><img src="/screens/rate_pad_chx.gif" border="0" width="15" height="14" title="Rated 3 stars out of 5 based on 1 ratings" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787111554066&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111554066&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+9f
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&5%2C5%2C">C语言解惑 / 刘振安, 刘燕君编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+刘振安
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 机械工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+f0
+本书内容包括：引入指针变量；指针基础知识；一维数组；指针与数组；函数基础知识；函数设计；函数设计实例；多文件中的函数设计；多文件综合设计实例；设计游戏程序实例。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_6'></a> 6<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3919954" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+10e
+
+<span id="rategroup6"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_6"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787111554417&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111554417&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+c5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&6%2C6%2C">工程问题C语言求解 / (美) 德洛莉丝 M. 埃特尔著 / Delores M.Etter</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1a
+埃特 (Etter, Delores M.)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 机械工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+18a
+本书介绍如何使用C编程语言求解工程问题。书中从通用的5步方法论入手，以犯罪现场调查、地形导航、飓风等级测量等众多热点技术领域的工程问题为应用对象，生动、有趣地讲解了C语言中的基本操作符、标准输入/输出、基本函数、控制结构、数据文件、模块化编程、数组以及指针等重要概念。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_7'></a> 7<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3914532" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+116
+
+<span id="rategroup7"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_7"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302458272&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302458272&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b9
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&7%2C7%2C">C语言程序设计案例教程 / 陆洲, 刘素芬, 陈慧英主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+陆洲
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1a7
+本书以培养学生程序设计基本能力为目标, 系统地介绍了C语言程序设计的基本知识和方法。全书共分12章, 主要内容包括C语言基础、算法基础、选择结构程序设计、循环结构程序设计、数组、函数、指针、结构体、文件、系统设计与开发、程序编写的常见错误、C语言试题。全书结构清晰, 案例丰富, 语言流畅, 通俗易懂。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_8'></a> 8<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3914317" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+116
+
+<span id="rategroup8"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_8"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787115435408&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115435408&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ae
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&8%2C8%2C">协作物联网 (C-IoT) / (美) Fawzi Behmann, Kwok Wu著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1a
+本曼恩 (Behmann, Fawzi)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+13e
+本书阐述了一个简单且有前瞻性的先进物联网模型“协作物联网（C-IoT）”, 该模型集成了传感、网关以及业务, 并阐述了实现网络协作物联网的路径。提出了在2020s、2030s以及更远未来潜在的丰富的商业应用案例集, 定义了需求以及实施架构。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+4f
+<a name='anchor_9'></a> 9<!--this is customized <screens/briefcit_chx.html>-->
+
+86
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3914293" >
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+10e
+
+<span id="rategroup9"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_9"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+8
+<br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302453703&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302453703&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ba
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&9%2C9%2C">Objective-C和Sprite Kit游戏开发从入门到精通 / 曹化宇著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+曹化宇
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+106
+本书是一线程序员凝聚自己多年开发经验的结晶之作，深入浅出地讲解Objective-C语言、Foundation框架、Sprite Kit框架，以及其他开发iOS和Mac游戏所需要的基础知识，帮助读者零基础实践iOS和Mac游戏开发。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_10'></a> 10<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3922351" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3922351&FF=Xc++&SORT=D&10%2C10%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup10"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_10"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787560644226&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787560644226&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+d1
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&10%2C10%2C">Linux C程序设计 / 青岛农业大学, 青岛英谷教育科技股份有限公司编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+12
+青岛农业大学
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+30
+西安 : 西安电子科技大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+277
+本书从Linux系统出发, 以CentOS系统为背景详细介绍了Linux系统开发的环境及编程接口。全书共分为7章, 分别介绍了Linux系统概述、开发环境搭建、文件编程、进程编程、线程编程、网络编程以及数据库编程等内容。本书重点突出、应用性较强、内容简练、题材新颖、案例详实, 理论性与实践性并重, 在结合大量实例的基础上对Linux系统编程接口进行了细致的讲解与剖析, 既涉及操作系统基本原理, 又涉及操作系统接口实现, 使读者能够迅速理解并掌握相关知识, 全面提高动手能力。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_11'></a> 11<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3923357" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3923357&FF=Xc++&SORT=D&11%2C11%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup11"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_11"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787115439338&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115439338&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b1
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&11%2C11%2C">C语言程序设计案例式教程 / 黑马程序员编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+f
+黑马程序员
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+113
+本书共分为10章，用案例诠释了C语言的基础语法知识和C语言核心内容，具体内容包括C语言概述、数据类型与运算符、结构化程序设计、函数、数组、指针、字符串、编译和预处理、结构体和共用体、文件等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_12'></a> 12<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3926722" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3926722&FF=Xc++&SORT=D&12%2C12%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup12"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_12"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302439943&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302439943&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ab
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&12%2C12%2C">新概念C程序设计大学教程 / 张基温编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+张基温
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+362
+本共9单元可分为4个部分。第1部分是针对C程序设计的初级训练：第1单元介绍进行C语言程序设计首先应当掌握的一些基本概念和方法；第2、3单元在第1单元的基础上介绍判断结构和重复结构，第4单元介绍穷举、迭代、递归和模拟，奠定算法基础。第2部分是在第1部分的基础上进行数据类型的扩展：第5单元介绍数组，第6单元介绍3种可定制数据结构——构造体、共用体和枚举，第7单元介绍指针及其应用。第3部分只有第8单元一单元，介绍分治、回溯、贪心策略和动态规划，作为算法设计进阶，可以使读者的程序设计能力提升到较高水平。第4部分用第9单元一单元介绍一些可能用得着的有关内容，包括外部变量、内联函数、带参宏定义、文件和位操作。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+69
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_13'></a> 13<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3926728" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3926728&FF=Xc++&SORT=D&13%2C13%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup13"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_13"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787121306952&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121306952&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&13%2C13%2C">新编51单片机C语言教程 / 蔡杏山, 蔡玉山编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+蔡杏山
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+221
+本书是一本以实例详解方式介绍51单片机与C语言编程的图书，主要内容有单片机入门、51单片机的硬件系统、Keil C51编程软件的使用、单片机驱动LED与LED数码管的电路及编程、中断的使用及编程、定时器/计数器的使用及编程、独立按键与矩阵键盘输入电路及编程、点阵和液晶显示屏的使用及编程、步进电机的使用及编程、串行通信的使用及编程、I2C总线通信的使用及编程、A/D(模/数)与D/A(数/模)转换电路及编程。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_14'></a> 14<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3922339" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3922339&FF=Xc++&SORT=D&14%2C14%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup14"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_14"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+139
+<a href="http://book.duxiu.com/search?sw=9787302458531&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302458531&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&14%2C14%2C">C/C++程序设计 / 张正明, 卢晶琦主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+张正明
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+3ad
+本教材以面向应用型人才培养为目标，以非传统的组织结构为创新点，以全程伴随上机实践为特色，简洁、通俗、直观、易懂地讲述C/C++程序设计。第1～5章讲述了C语言的背景知识、上机环境以及基础知识，包括数据类型、变量和表达式以及顺序、分支、循环三大结构语句及其编程。第6̃9章介绍C语言的重点部分，包括数组、函数和指针。第10～12章是提高部分，从结构体引出类，介绍C的基础知识和文件，以适应学完本书后直接参加“全国高校计算机水平考试(二级C)”的需要。全书直接采用C的cin和cout进行输入输出，摒弃了C语言中的printf和scanf函数调用。在三部分内容之间两次集中讲解典型题和难题的解题思路，增加了相当篇幅的动态调试内容，非常有利于学习者上机实践以及有效地提高编程、调试能力。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_15'></a> 15<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3922349" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3922349&FF=Xc++&SORT=D&15%2C15%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup15"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_15"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302457787&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302457787&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&15%2C15%2C">C语言从入门到精通 / 明日科技编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+c
+明日科技
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1e1
+本书从初学者的角度出发, 以通俗易懂的语言, 丰富多彩的实例, 详细介绍了使用C语言进行程序开发应该掌握的各方面知识。全书共分17章, 包括C语言概述、算法、数据类型、运算符与表达式、常用的数据输入/输出函数、选择结构程序设计、循环控制、数组、函数、指针、结构体和共用体、位运算、预处理、文件、存储管理、网络套接字编程和学生成绩管理系统。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_16'></a> 16<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3922344" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup16"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_16"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302455899&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302455899&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+99
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&16%2C16%2C">C语言程序设计 / 张磊编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+张磊
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+15c
+全书共有10章，分别是程序设计概述、简单程序设计、选择结构程序设计、循环结构程序设计、数组程序设计、函数程序设计、指针程序设计、结构体程序设计、文件程序设计以及综合程序设计等，前9章在每章之后均附有实验指导，并在书后附有简明的习题解答。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_17'></a> 17<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3945056" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup17"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_17"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787564353278&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787564353278&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a6
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&17%2C17%2C">计算机程序设计基础C/C++ / 主编景红</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+景红
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2a
+成都 : 西南交通大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+137
+本书介绍计算机程序设计中的基本概念、基础知识和基本技能。其内容主要包括：软件开发、算法描述和C/C++语言基本语法等基础知识，常用数据类型和经典问题通用算法，面向过程、面向对象和STL程序设计的基本方法和基本调试技能。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_18'></a> 18<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3952445" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup18"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_18"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787111559719&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111559719&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b6
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&18%2C18%2C">单片机C语言实战开发108例 / 宋馥莉, 杨淼等编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+宋馥莉
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 机械工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1f6
+本书以Proteus和Keil μVision为开发环境来介绍51单片机的开发应用方法，分为准备篇、基础篇、提高篇和综合篇四个部分。准备篇介绍51单片机学习的准备知识，包括Proteus、Keil μVision的应用方法，51单片机的结构等。基础篇介绍51单片机的内部模块的应用方法。提高篇介绍51单片机的外部扩展模块的应用方法。综合篇介绍使用51单片机来解决实际问题的方法，并且给出典型应用实例。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_19'></a> 19<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3960350" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup19"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_19"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787111564447&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111564447&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+bc
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&19%2C19%2C">嵌入式C编程 / (美) 马克·西格斯蒙德著 / Mark Siegesmund</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+22
+西格斯蒙德 (Siegesmund, Mark)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 机械工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+98
+本书介绍PIC单片机的C语言程序设计方法，前半部分详细讲解C语言的基本概念，后半部分重点关注PIC及其外围组件。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_20'></a> 20<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3960558" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup20"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_20"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+139
+<a href="http://book.duxiu.com/search?sw=9787562351801&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787562351801&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a0
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&20%2C20%2C">Obiective-C实验指导 / 主编刘志伟</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+刘志伟
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2a
+广州 : 华南理工大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+425
+本书由六章共18个实验组成，分别针对Objective-C语言的开发环境，如何创建和使用类，如何实现继承、多态和复合，基础框架的学习，内存管理、对象初始化和属性。第3部分讲述了如何扩展objective-c对象，包括如何使用分类和扩展，如何使用协议和委托等方面进行了讲解和练习。每章一个主题，由三大部分组成。 第一部分相关知识点。这是动手实验之前的理论准备过程。实验及练习部分用到的知识点和技巧在这里都做出了较为系统的体现。这一部分，无论是在动手实验前/后都可以学习/复习到相关的知识点。第二部分实验。每章均由2̃4个不等的实验组成，每个实验可以根据实际情况单独作为一次课堂实验内容，也可以与第一部分的知识点一起作为边讲边练的教师演示内容。第三部分课后练习。根据实际情况，这部分内容可完全安排学生课后自主完成，也可以与课堂实验一起作为一次教学内容。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_21'></a> 21<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3925239" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup21"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_21"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+f
+<br />
+
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787121306747&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121306747&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&21%2C21%2C">C语言程序设计 / 牛连强, 冯海文, 侯春光编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+牛连强
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+f7
+本书全面介绍了C语言的语法知识和利用其进行程序设计的相关技术, 包括C语言及程序设计的基础知识、数据组织、流程控制、函数封装、指针、字符串操作、构造数据类型及文件操作等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+3c
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2f
+<!-- This file last changed: 17 May, 2005 -->
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_22'></a> 22<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3960702" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup22"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_22"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787300237183&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787300237183&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+8d
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&22%2C22%2C">C理论 / 成中英著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+成中英
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2a
+北京 : 中国人民大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2d2
+本书为成中英著作集第五卷，成中英先生管理哲学思想的重要呈现，主要收录成中英先生的专著：《C理论：中国管理哲学》。成中英先生在分判中西方文化的差异，东西方社会组织、管理思想、哲学思维方式、价值体验和历史经验等多方面差异之上，建立了以《易经》为基础，以中国传统管理智慧与西方科学精神贯通为目的，融合了易、儒、道、兵、墨、法、禅等各家哲学精髓的C管理理论。除此之外，本卷附录部分还收录了成先生关于C管理理论的2篇重要论文。C理论的建立，对中国管理学的发展乃至世界宏观管理学都具有重要的借鉴意义。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_23'></a> 23<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3970209" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3970209&FF=Xc++&SORT=D&23%2C23%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup23"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_23"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787115450265&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115450265&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+af
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&23%2C23%2C">C语言程序设计 / 徐国华, 王瑶, 侯小毛主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+徐国华
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+497
+本书作为C 语言程序设计的教程，系统全面地介绍了有关C 语言程序设计开发所涉及的各类知识。全书共分17 章，内容包括C 语言概述、算法、数据类型、运算符与表达式、常用的数据输入/输出函数、选择结构程序设计、循环控制、数组、函数、指针、结构体和共用体、位运算、预处理、文件、存储管理、网络套接字编程、综合实例——学生信息管理系统。全书每章内容都与实例紧密结合，有助于学生理解知识、应用知识，达到学以致用的目的。本书为慕课版教材，各章节主要内容配备了以二维码为载体的微课，并在人邮学院（www.rymooc.com）平台上提供了慕课。此外，本书还提供了课程资源包。资源包中提供了本书所有实例、上机指导、综合案例的源代码、制作精良的电子课件PPT、重点及难点教学视频、自测题库（包括选择题、填空题、操作题题库及自测试卷等内容），以及拓展综合案例和拓展实验。其中，源代码全部经过精心测试，能够在Windows XP、Windows 7 系统下编译和运行。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_24'></a> 24<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4002528" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup24"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_24"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787030512185&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787030512185&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ae
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&24%2C24%2C">C语言程序设计案例教程 / 孙强 ... 等 主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+10
+等  孙强 ··
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+22
+北京 : 科学出版社, 2017.7.1
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+101
+本书分为12章，从分析C语言程序的基本结构 开始，介绍了常量、变量、表达式和常用输入／输出库函数、流程控制、数 组和字符串处理、函数、指针、编译预处理命令、结构体和共用体等知识。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_25'></a> 25<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4003274" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup25"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_25"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787030512178&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787030512178&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&25%2C25%2C">C语言程序设计实训教程 / 蔡春华 ... 等] 主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+14
+等]  蔡春华 ··
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+22
+北京 : 科学出版社, 2017.7.1
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+c8
+本书包括：C语言概述，C语言程序设计基础，顺序结构程序设计，选择结构程序设计，循环结构程序设计，编译预处理，函数，数组，指针，文件管理。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_26'></a> 26<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3955971" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3955971&FF=Xc++&SORT=D&26%2C26%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup26"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_26"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302468165&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302468165&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b3
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&26%2C26%2C">C语言程序设计及应用教程 / 郭鹏 ... [等] 编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+郭鹏
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1b7
+本教程以先进性、应用性、普及性为出发点, 在全面、系统介绍C语言基础知识和经典实例的同时, 在每一章节都引入了多个电类专业C语言编程实例, 通过实例精讲帮助学生快速实现从知识到能力的转化。全书分10章, 包括C语言概述、算法、数据类型、运算符、表达式、程序结构、数组、函数、指针、结构体共用体、位运算和文件等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+69
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_27'></a> 27<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974660" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup27"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_27"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787030516350&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787030516350&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+9c
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&27%2C27%2C">C语言程序设计 / 主编祁昌平</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+祁昌平
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1e
+北京 : 科学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_28'></a> 28<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974218" >
+
+7
+<br />
+
+100
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3974218&FF=Xc++&SORT=D&28%2C28%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+117
+
+<span id="rategroup28"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_28"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+1
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302470137&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302470137&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b0
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&28%2C28%2C">程序设计基础 (C语言) / 巫喜红, 钟秀玉主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+巫喜红
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+20d
+本书以C语言为实例介绍程序设计的基础知识, 由浅入深地讲解了如何使用程序设计思想分析和理解问题, 如何利用C语言程序设计方法处理和解决实际问题。本书将C语言的学习分为12章, 第1-2章介绍了C语言的基本概念、基本常识和程序设计思想; 第3-6章主要介绍了C语言的数据类型及三种结构; 第7-11章介绍了C语言的数组、函数、指针、自定义数据类型、位运算和文件操作; 第12章为C语言的文件操作。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_29'></a> 29<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974669" >
+
+7
+<br />
+
+100
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3974669&FF=Xc++&SORT=D&29%2C29%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup29"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_29"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+8
+<br />
+
+
+7
+<br />
+
+168
+<a href="http://book.duxiu.com/search?sw=9787030533760&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787030533760&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+<span class="briefcitTitle">
+
+9c
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&29%2C29%2C">C语言程序设计 / 贾志娟主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+贾志娟
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1e
+北京 : 科学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+cd
+全书共分为11章，包括C语言概述、简单C程序设计、选择控制结构、循环控制结构、函数、数组、字符串、指针、结构体和共用体、编译预处理和文件等内容
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_30'></a> 30<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974170" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup30"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_30"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302473138&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302473138&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b8
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&30%2C30%2C">C语言程序设计案例教程 / 刘兆宏, 温荷, 王会编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+刘兆宏
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2d7
+本书是一本面向广大初学者的C语言案例教材，全书共10章：第1章-第3章介绍程序设计与C语言的基础知识；第4章-第8章介绍数组、函数、指针、结构体与共用体、文件等重要内容；第9章-第10章分别采用指针、数组、单链表来开发“学生成绩管理系统”，通过案例的分析实现培养初学者运用C语言开发中小型项目的能力。针对初学者和自学读者的特点，本书力求做到深入浅出，将复杂的概念用简洁的语言娓娓道来。全书以项目为主线，基础性和实用性并重。项目贯穿全书，通过对项目的实现和讲解，使读者逐步具备利用C语言来开发应用程序的能力。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_31'></a> 31<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3933606" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+117
+
+<span id="rategroup31"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_31"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+1
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787121305559&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121305559&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b4
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&31%2C31%2C">双语版C程序设计 / (爱尔兰) Paul Kelly, 苏小红著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+14
+凯利 (Kelly, Paul)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+f0
+本书全面介绍了C程序设计方法，包括基本数据类型和基本输入/输出方式、各种控制结构和语句、指针和数组、字符串、函数、结构、文件输入和输出等内容，最后讨论了C预处理器。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_32'></a> 32<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974271" >
+
+7
+<br />
+
+100
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3974271&FF=Xc++&SORT=D&32%2C32%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup32"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_32"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302472407&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302472407&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+bf
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&32%2C32%2C">C语言课程设计与游戏开发实践教程 / 童晶 ... [等] 编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+童晶
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+c5
+本书把游戏开发实践应用于C语言课程设计教学, 应用C语言从无到有开发游戏, 通过游戏案例逐步应用学到的语法知识, 提升读者对编程的兴趣和能力。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+7
+</tr>
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_33'></a> 33<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3974189" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3974189&FF=Xc++&SORT=D&33%2C33%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup33"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_33"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+8
+<br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302471202&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302471202&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&33%2C33%2C">标准C程序设计 / (印) E. Balagurusamy著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+25
+巴拉古鲁萨米 (Balagurusamy, E.)
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+12e
+本书保留了该系列畅销书的精华，以简洁、清晰、符合逻辑的顺序来表现C语言编程的概念，是初学者理想的教材。本教材使用了范例程序、案例研究、编程问题、项目和许多更加有助于教学的方法来使读者能够更好地理解C语言。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_34'></a> 34<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3901616" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup34"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_34"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787121300059&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121300059&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+bb
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&34%2C34%2C">C语言大学实用教程 / 苏小红, 孙志岗, 陈惠鹏等编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+苏小红
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2b4
+本书注重教材的可读性和可用性，每章开头有内容关键词和难点提示；每章结尾安排本章小结，给出了该章常见编程错误提示；典型例题一题多解，由浅入深，强化知识点、算法、编程方法与技巧；还将程序测试、程序调试与排错、软件的健壮性和代码风格、结构化与模块化程序设计方法等软件工程知识融入其中；配套教材《C语言大学实用教程学习指导（第4版）》包括习题解答、上机实验指导、案例分析三部分，案例分析中给出了错误案例与趣味经典实例分析；为任课教师免费提供电子课件及全部例题和习题源代码。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_35'></a> 35<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3991554" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup35"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_35"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787115456960&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115456960&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ad
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&35%2C35%2C">C语言程序设计教程 / 陈家俊, 符茂胜主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+陈家俊
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+102
+全书共10章，其中第1章～第7章主要介绍C语言基础知识、数据类型与基本运算、逻辑控制结构、函数与数组等；第8章～第10章主要介绍C语言中的难点内容，包括指针、结构体与共用体、文件操作。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_36'></a> 36<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3991559" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup36"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_36"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787113233686&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787113233686&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b3
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&36%2C36%2C">C语言程序设计习题解析 / 薛春艳, 郭一晶主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+薛春艳
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 中国铁道出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+fd
+本书共分9章, 分别对C语言基本数据类型、程序控制语句、函数、数组、结构体、共用体和枚举类型、指针、文件读/写操作等内容的各类习题作了详细解析, 并给出了多套试题样卷及参考答案。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+1f
+<tr >
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+122
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_37'></a> 37<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+<input type="checkbox" 
+name="save" value="b3992221" >
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3992221&FF=Xc++&SORT=D&37%2C37%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup37"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_37"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787115451743&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115451743&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+bb
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&37%2C37%2C">C语言程序设计教程 / 胡春安, 欧阳城添, 王俊岭主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+胡春安
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+f1
+本书共分11章，主要内容包括：C语言概述；程序设计初步；C语言编程基础；顺序结构程序设计；选择结构程序设计；循环结构程序设计；数组；函数；指针；结构体和共用体；文件。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_38'></a> 38<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3992977" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3992977&FF=Xc++&SORT=D&38%2C38%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup38"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_38"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302481935&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302481935&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+b2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&38%2C38%2C">C语言程序设计 / 黄洪艺, 李慧琪, 张丽丽编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+黄洪艺
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+e6
+本书内容包括程序设计语言和程序设计的基本概念, C语言的词法语法, 三种基本控制结构, 函数的定于和调用, 数组、结构体、指针等复杂数据类型的定义和应用, 文件操作等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+3c
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+7
+
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_39'></a> 39<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3987850" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3987850&FF=Xc++&SORT=D&39%2C39%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup39"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_39"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787111567301&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787111567301&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&39%2C39%2C">C/C++程序设计 / 范翠香, 刘辉编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+范翠香
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 机械工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+134
+本书以程序设计思想为主导，详细介绍了程序设计的基本知识、C语言基本知识、结构化程序设计方法、数组、指针、函数、结构体、编译预处理、文件操作和C语言程序调试技能，同时对于面向对象程序设计的基本概念也进行了介绍。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_40'></a> 40<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3993013" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup40"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_40"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787519808334&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787519808334&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ab
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&40%2C40%2C">MCS-51单片机C语言编程100例 / 孙安青编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+孙安青
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 中国电力出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+196
+本书以STC15F2K60S2增强型的单周期单片机为核心器件，通过100个应用实例，以单片机的功能模块为起点，以每个模块的硬件、软件设计为主线，通过大量实例的介绍来达到理论联系实际的目的，让读者能迅速开发出实际的应用系统。本书讲解深入浅出，实例内容翔实，绝大多数模块、实例都有Proteus仿真验证。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_41'></a> 41<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4019630" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup41"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_41"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787535493521&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787535493521&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+8d
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&41%2C41%2C">C形包围 / 戴旭著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+戴旭
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+武汉 : 长江文艺出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+232
+本书是戴旭结合数年战略研究, 重新铸就全景式世界政治、军事巨作。在本书中, 戴旭大校对中国周边安全局势进行了鞭辟入里的分析, 聚焦东北亚、中亚等热点地区, 大胆分析中国国家安全与军队建设。在本书中, 戴旭大校创造性地提出美国对华实行“C形包围”, 引起极大的社会反响。观此文, 会让如今的中国人--大部分被盛世、崛起、和谐等迷幻药熏得迷迷糊糊、形同梦游乃至娱乐至死的中国人, 突然清醒并惊出一身冷汗。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_42'></a> 42<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b4019631" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+11f
+
+<span id="rategroup42"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_42"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787535493538&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787535493538&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a0
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&42%2C42%2C">C形包围. Ⅱ. , Q形绞索 / 戴旭著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+戴旭
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+武汉 : 长江文艺出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+165
+美国已经将一根绳子放在中国的脖子上, 这个致命的“弧”包括澳大利亚、太平洋的群岛、马里亚纳群岛、菲律宾、泰国、冲绳、韩国, 在欧亚地区还包括阿富汗和印度。这就是所谓的“Q形绞索”。对手做局, 中国如何破局? 戴旭全新解读美国对华战略, 仗剑问道明日中国!
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6b
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+
+35
+<tr >
+<td class="briefCitRow">
+<table width="100%" >
+
+ae
+<tr valign="top">
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+<a name='anchor_43'></a> 43<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+3e
+<input type="checkbox" 
+name="save" value="b3992979" >
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3992979&FF=Xc++&SORT=D&43%2C43%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup43"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_43"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302479840&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302479840&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a2
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&43%2C43%2C">C语言程序设计教程 / 王娟勤主编</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+王娟勤
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+ef
+本书从培养学生计算思维的角度出发, 以案例为引导, 介绍了C程序设计基础、基本数据类型、数据运算、程序基本结构、数组、指针、函数、结构体、文件和指针的高级应用等内容。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_44'></a> 44<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3933504" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup44"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_44"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787115437204&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787115437204&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+ac
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&44%2C44%2C">Objective-C应用开发全程实录 / 李梓萌编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+李梓萌
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 人民邮电出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2f4
+本书从搭建开发环境讲起，依次讲解了Objective-C的基础，如常量、变量和数据类型，运算符和表达式，选择结构，循环结构；Objective-C的高级知识，如类、对象和方法、继承、多态、动态类型和异常处理；Objective-C的实战技术，如Foundation框架类详解，日期、时间、复制和谓词，文件操作，Xcode Interface Builder界面开发，使用Xcode编写MVC程序，基础控件，Web视图控件，可滚动视图控件和翻页控件，提醒、操作表和表视图，活动指示器、进度条和检索条，UIView和视图控制器，图形、图像、图层和动画，多媒体应用，定位处理，触摸、手势识别和Force Touch，Touch ID，游戏开发等。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_45'></a> 45<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3992228" >
+
+7
+<br />
+
+100
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3992228&FF=Xc++&SORT=D&45%2C45%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a>
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup45"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_45"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302480877&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302480877&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+af
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&45%2C45%2C">C程序设计 (第五版) 学习辅导 / 谭浩强编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+谭浩强
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+23a
+本书包括4个部分, 第1部分是《C程序设计(第五版)》一书的习题和参考解答, 包括该书各章的全部习题, 对全部编程习题都给出了参考解答, 共计132个程序; 第2部分是深入学习C程序设计, 包括预处理指令、位运算、常见错误分析和C程序案例; 第3部分是上机指南, 详细介绍Visual C++ 6.0和Visual Studio 2010集成环境下编辑、编译、调试和运行程序的方法; 第4部分是上机实践指导, 包括程序的调试与测试、实验的目的与要求, 并提供了12个实验。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_46'></a> 46<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3920066" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3920066&FF=Xc++&SORT=D&46%2C46%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup46"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_46"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787121304620&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121304620&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+96
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&46%2C46%2C">啊哈C语言！ / 啊哈磊著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+啊哈磊
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+c0
+本书从开始学习与计算机对话到自己独立制作一个游戏，由浅入深地讲述编程的思维。同时，与计算机展开的逻辑较量一定会让你觉得很有意思。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_47'></a> 47<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3922333" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3922333&FF=Xc++&SORT=D&47%2C47%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup47"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_47"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+14b
+<a href="http://book.duxiu.com/search?sw=9787302462194&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302462194&w=120&h=135" border="0" alt="书的封面"></a><td width="*" align="left" valign="center"  class="briefcitDetail ">
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+a5
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&47%2C47%2C">实用有趣的C语言程序 / 杜树春编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+10
+杜树春, 1947-
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+99
+<a name='anchor_48'></a> 48<!--this is customized <screens/briefcit_chx.html>-->
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3955972" >
+
+7
+<br />
+
+3f
+<br />
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup48"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_48"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302466758&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302466758&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+96
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&48%2C48%2C">C程序设计 / 雍俊海编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+9
+雍俊海
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+d6
+本书在内容编排上对C语言的知识不求全面系统, 但求有理论、有深度、有层次, 使其真正能够承担起第一门专业软件课程的重任, 对大一新生有一定的专业引导性。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1
+
+
+3b
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+
+2e
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_49'></a> 49<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3988795" >
+
+7
+<br />
+
+7
+<br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+110
+
+<span id="rategroup49"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_49"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span>
+7
+<br />
+
+1
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787121316760&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787121316760&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+af
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&49%2C49%2C">C语言程序设计 / 蒋晶, 赵卫滨, 余永红编著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+6
+蒋晶
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 电子工业出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+2bd
+本书作为高级程序设计语言的入门与应用教程，讲授C语言程序设计的基本思想、方法和解决问题的技巧。在内容安排和章节组织上，尽可能将概念、知识点和例程结合。本书注重基础，突出应用，更好地满足了高等学校应用型人才培养的需求。全书共分10章，内容包括：C/C++语言的发展过程及特点，程序设计基础知识，程序设计基本结构，函数，编译预处理命令，数组，指针，结构体、共用体和枚举型，文件，面向对象技术与C++语言概述。本书易教易学、学以致用、注重能力，对初学者容易混淆的内容进行了重点提示和讲解。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+6a
+
+<!-- 2006 Web OPAC Version, set from 21 November, 2006 -->
+<!-- This file last changed: 17 May, 2005 -->
+
+1
+
+
+6
+<tr >
+
+19
+<td class="briefCitRow">
+
+16
+<table width="100%" >
+
+12
+<tr valign="top">
+
+4b
+<td align="center" valign="center" width="3%" class="briefcitResultInfo" >
+
+51
+<a name='anchor_50'></a> 50<!--this is customized <screens/briefcit_chx.html>-->
+
+48
+<td align="center" valign="center" width="8%" class="briefcitActions" >
+
+37
+<input type="checkbox" 
+name="save" value="b3992226" >
+
+7
+<br />
+
+107
+<a href="https://ftp.lib.hust.edu.cn:443/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CC/requestbrowse~b3992226&FF=Xc++&SORT=D&50%2C50%2C"><img src="/screens/request_chx.gif" alt="Bullet Point" border="0" style="margin-right:5px"/></a><br />
+
+38
+<td valign="center" width="9%" class="briefcitExtras" >
+
+118
+
+<span id="rategroup50"><a href="/patroninfo*chx/0/redirect=/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse#anchor_50"><img src="/screens/rate_no_chx.gif" border="0" width="75" height="14" title="No one has rated this material" /></a>
+
+</span><br />
+
+
+7
+<br />
+
+f4
+<a href="http://book.duxiu.com/search?sw=9787302481447&allsw=&searchtype=&channel=search&bCon=&ecode=utf-8&Field=all|i" target="_parent"><img src="http://www.yuntu.io/book/cover?isbn=9787302481447&w=120&h=135" border="0" alt="书的封面"></a>
+45
+<td width="*" align="left" valign="center"  class="briefcitDetail ">
+
+12
+<!--{nohitmsg}-->
+
+1d
+<span class="briefcitTitle">
+
+93
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/frameset&FF=Xc++&SORT=D&50%2C50%2C">C程序设计 / 谭浩强著</a>
+1
+
+
+8
+</span>
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+10
+谭浩强, 1934-
+1
+
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+24
+北京 : 清华大学出版社, 2017
+7
+<br />
+
+7
+<br />
+
+1e
+<span class="briefcitDetail">
+
+1a8
+本书由浅入深地介绍什么是程序，怎样编写程序，怎样调试和运行程序。以程序设计贯穿始终，使学生掌握程序设计的基本知识和方法。本书将算法与C语言的语法紧密结合，而不是孤立地介绍语法。作者精心考虑怎样将算法与语法紧密而巧妙地结合起来。按照“算法是程序的灵魂，语言是编程的工具”的思路组织全书。
+7
+<br />
+
+6
+&nbsp;
+4c
+<td align="center" valign="center" width="10%" class="briefcitResultInfo" >
+
+31
+ <img src="/screens/media_book.gif" alt="专著">
+6
+</tr>
+
+9
+</table>
+
+6
+</td>
+
+6
+</tr>
+
+1
+
+
+1000
+
+<tr align="CENTER" valign="MIDDLE">
+<td colspan="5"  class="browseSaveJump" width="100%">
+<a href="#" onclick="process_save(0);" style="text-decoration:none">
+<img src="/screens/savemarked_chx.gif" alt="Save marked records" class="button" width="120" height="20" border="0" /></a>
+<span name='save_page_btn2' id='save_page_btn2' style='visibility: visible' ><a href="#" onclick="process_save(1);" style="text-decoration:none">
+<img src="/screens/saveallpage_chx.gif" alt="Save all on page" class="button" width="120" height="20" border="0" /></a>
+</span>
+</form>
+
+<form action="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse/indexsort=D" method="POST">
+<input type="HIDDEN" name="jumpref" value="Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/1%2C32000%2C32000%2CB/browse">
+<script type="text/JavaScript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><img src="/screens/locateinresults_chx.gif" alt="Locate in results" class="button" width="120" height="20" border="0" /></a>
+
+
+
+<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
+<input type="TEXT" name="jumpto" value="32000" size="5" maxlength="5">
+</form>
+
+</td></tr>
+
+
+</td>
+</tr>
+</table>
+<!-- END BROWSELIST/BRIEFCIT AREA -->
+</td>
+<!-- END BROWSE SCREEN LEFT CELL -->
+
+<!-- BEGIN BROWSE SCREEN RIGHT CELL -->
+<td valign="top" width="%">
+<div valign="top"  class="browseResourceTable">
+
+<!-- BEGIN RESOURCE TABLE -->
+<table width="100%"  class="browseResourceTable" cellpadding="0" cellspacing="0" border="0">
+<tr class="browseResourceTableHeader">
+<td class="browseResourceTableHeader"><em></em></td></tr>
+</table>
+<!-- END RESOURCE TABLE -->
+
+</div>
+
+</td>
+<!-- END BROWSE SCREEN RIGHT CELL -->
+</tr>
+
+<!-- BEGIN BOTTOM BROWSE PAGER -->
+<!-- begin page widgit -->
+<tr  class="browsePager"><td align="center"  class="browsePager" colspan="5">
+
+结果页&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/51%2C32000%2C32000%2CB/browse">2</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/101%2C32000%2C32000%2CB/browse">3</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/151%2C32000%2C32000%2CB/browse">4</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/201%2C32000%2C32000%2CB/browse">5</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/251%2C32000%2C32000%2CB/browse">6</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/301%2C32000%2C32000%2CB/browse">7</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/351%2C32000%2C32000%2CB/browse">8</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/401%2C32000%2C32000%2CB/browse">9</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/451%2C32000%2C32000%2CB/browse">10</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/501%2C32000%2C32000%2CB/browse">11</a>
+...
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/31951%2C32000%2C32000%2CB/browse">640</a>
+<a href="/search*chx?/Xc++&SORT=D/Xc++&SORT=D&SUBKEY=c++/51%2C32000%2C32000%2CB/browse">后一页</a>
+<!-- end page widgit -->
+</td>
+<td>&nbsp;</td>
+</tr>
+<!-- END BOTTOM BROWSE PAGER -->
+</table>
+<!-- END BROWSE SCREEN TABLE -->
+<div align="center" class="navigationRow">
+<form>
+<a href="/search~S0*chx"><img src="/screens/startover_chx.gif" alt="重新检索" border=
+4ea
+"0" /></a>
+<a href="/search*chx/X?NOSRCH=c++&SORT=D&SUBKEY=c++"><img src="/screens/modify_chx.gif" alt="修改检索" border="0" /></a>
+<a href="/search*chx/X"><img src="/screens/another_chx.gif" alt="再次检索" border="0" /></a>
+<select name=HISTORY onChange="onSelectChange(this, '*chx')"><option value="">(检索历史)</option>
+<OPTION VALUE="Xc++&SORT=D">关键词: c  
+<option value="+/search*chx/X?c++&SORT=D&clear_history">(清除检索历史)</option>
+<option value="+/*chx">(结束检索进程)</option>
+</select>
+</form>
+</div>
+
+
+<!-- begin botlogo.html file -->
+<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
+<!-- This file last changed: 20 April, 2006 -->
+<br />
+<!--Begin the bottom logo table-->
+<div id="botnav">
+<ul class="botmenuLinks">
+<li><a href="http://ch4gj9pm7p.search.serialssolutions.com/">电子资源导航</a></li>
+<li class="breaker">|</li>
+<li><a href="/screens/springerebook.html">Springer外文全文电子图书</a></li>
+<li class="breaker">|</li>
+<li><a href="/screens/edurecommend.html">大学生必读书目</a></li>
+</ul>
+</div>
+<div align="center" >最佳显示模式----IE9.0及以上浏览器，分辨率1024x768</div>
+<!--End the bottom logo table-->
+<!-- end botlogo.html file -->
+
+</body>
+</html>
+
+0
+

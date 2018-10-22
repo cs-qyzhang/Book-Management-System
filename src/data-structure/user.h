@@ -21,6 +21,7 @@ typedef struct user
     char *job_id;               // 工号
     BorrowBook *borrow_book;    // 已借阅的图书 单链表头指针
     BorrowBook *borrow_history; // 借阅历史 单链表头指针
+    struct user *next;          // 指向链表下一个节点
 
 }User;
 

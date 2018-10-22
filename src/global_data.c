@@ -13,17 +13,8 @@
 
 LoginType login_type;       // 登录类型：管理员，普通用户，游客
 
-bool login_type_root()
-{
-    return (login_type == LOGIN_TYPE_ROOT) ? true : false;
-}
+int sfd;                    // socket file descripter
 
-bool login_type_user()
-{
-    return (login_type == LOGIN_TYPE_USER) ? true : false;
-}
+User *user_list;            // 所有用户的链表，为无头尾结点的单链表
 
-bool login_type_none()
-{
-    return (login_type == LOGIN_TYPE_NONE) ? true : false;
-}
+bool connected;             // 是否连接上了服务器/客户端

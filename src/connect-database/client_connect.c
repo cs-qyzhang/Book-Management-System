@@ -8,12 +8,24 @@
  *
  */
 #include <arpa/inet.h>
+#include <sys/types.h>
 #include <sys/socket.h>
+#include <netdb.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
-#include "connect_database.h"
+#include "./connect_database.h"
+#include "../global_data.h"
+
+void *get_in_addr(struct sockaddr * addr)
+{
+    if (addr->sa_family == AF_INET)
+        return &(((struct sockaddr_in *)addr)->sin_addr);
+    else
+        return &(((struct sockaddr_in6 *)addr)->sin6_addr);
+}
 
 /*
  * 函数名称：connect_to_server
@@ -27,70 +39,79 @@
  * 创建时间：2018/10/17
  *
  */
-bool connect_to_server(char *send_msg, size_t send_len, char *recv_msg, size_t recv_len)
+bool connect_to_server()
 {
-    struct sockaddr_in addr;
-    int sfd;
-    int byte_send, byte_recv;
+    struct addrinfo hints, *res;
 
-    sfd = socket(AF_INET, SOCK_STREAM, 0);
+    memset(&hints, 0, sizeof(struct addrinfo));
+    hints.ai_family = AF_INET;
+    hints.ai_socktype = SOCK_STREAM;
+
+    if (getaddrinfo(IP_SERVER, PORT_SERVER, &hints, &res) == -1)
+    {
+        perror("getaddrinfo");
+        return false;
+    }
+
+    int sfd;
+    sfd = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
     if (sfd == -1)
     {
-        fprintf(stderr, "connect_server : socket creat failed!\n");
+        perror("socket");
         return false;
     }
 
-    memset(&addr, 0, sizeof(struct sockaddr_in));
-    addr.sin_family = AF_INET;
-    addr.sin_port   = PORT_SERVER;
-    if (inet_pton(AF_INET, IP_SERVER, &addr.sin_addr) <= 0)
-    {
-        fprintf(stderr, "connect_server : inet_pton error!\n");
-        return false;
-    }
-    printf("inet_pton success!\n");
-
-    if (connect(sfd, (struct sockaddr *)&addr, sizeof(struct sockaddr_in)) == -1)
+    printf("begin connect...\n");
+    if (connect(sfd, res->ai_addr, res->ai_addrlen) == -1)
     {
         perror("connect");
-        fprintf(stderr, "connect_server : connect error!\n");
+        close(sfd);
         return false;
     }
 
-    printf("connect success!\n");
-    while (true)
-    {
-        byte_send = send(sfd, send, send_len, 0);
-        printf("send finished\n");
-        if (byte_send == -1)
-        {
-            fprintf(stderr, "connect_to_server : send error!\n");
-            return false;
-        }
-        else if ((unsigned long)byte_send < send_len)
-        {
-            send_msg += byte_send / sizeof(char);
-            send_len -= byte_send;
-        }
-        else
-            break;
-    }
-    printf("send success!\n");
+    connected = true;
+    char buf[51];
+    inet_ntop(res->ai_family, get_in_addr(res->ai_addr), buf, 50);
+    freeaddrinfo(res);
+    printf("connected to server: %s!\n", buf);
 
-    byte_recv = recv(sfd, recv_msg, recv_len, 0);
-    if (byte_recv == -1)
+    return true;
+}
+
+bool
+close_connection_to_server()
+{
+    if(close(sfd))
     {
-        fprintf(stderr, "connect_to_server : recv error!\n");
+        perror("close_connection_to_server : close");
         return false;
     }
-    else if (byte_recv == 0)
-    {
-        fprintf(stderr, "connect_to_server : recv error! connection closed!\n");
-        return false;
-    }
-    else
-        ;
+    connected = false;
+    return true;
+}
 
-    printf("%s\n", recv_msg);
+bool
+send_value(const char *value_name, const void *value)
+{
+    if (!connected)
+        return false;
+
+    char *msg;
+    msg = value_write(value_name, value);
+
+    send(sfd, msg, strlen(msg), 0);
+
+    return false;
+}
+
+bool send_line(const char *msg)
+{
+    if (!connected)
+        return false;
+
+    char *send_msg;
+    send_msg = (char *)malloc(strlen(msg) + strlen("\n") + 1);
+    sprintf(send_msg, "%s\n", msg);
+    send(sfd, send_msg, strlen(msg), 0);
     return true;
 }
